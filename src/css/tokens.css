@@ -69,3 +69,101 @@ body {
 [dir="ltr"] .ltr-flip {
   transform: scaleX(-1);
 }
+
+/* ========================================================
+   Landing Page Micro-Animations & Dynamic Motion Tokens
+   ======================================================== */
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(6px) rotate(-0.4deg);
+  }
+}
+
+@keyframes pulseSoftGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(11, 42, 143, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(11, 42, 143, 0);
+  }
+}
+
+@keyframes voiceWave {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 22px;
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes ambientGlowDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(20px, -15px) scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatSlowReverse 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseSoftGlow 2.5s infinite;
+}
+
+.animate-scroll-bounce {
+  animation: scrollBounce 2s infinite;
+}
+
+.animate-ambient-glow {
+  animation: ambientGlowDrift 8s ease-in-out infinite;
+}
+
+.voice-wave-bar {
+  animation: voiceWave 1.2s ease-in-out infinite;
+}
+.voice-wave-bar:nth-child(2) { animation-delay: 0.15s; }
+.voice-wave-bar:nth-child(3) { animation-delay: 0.3s; }
+.voice-wave-bar:nth-child(4) { animation-delay: 0.45s; }
+.voice-wave-bar:nth-child(5) { animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(6) { animation-delay: 0.35s; }
+
+/* Custom Cubic Bezier for Ultra-Smooth Slide Motion */
+.ease-apple {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+

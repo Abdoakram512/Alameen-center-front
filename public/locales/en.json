@@ -54,7 +54,8 @@
     "step2": "Learn Your Way",
     "step3": "Advance Your Skills",
     "statsStudents": "+1,000 Students",
-    "statsSub": "Already Enrolled"
+    "statsSub": "Already Enrolled",
+    "scrollPrompt": "Scroll down to explore"
   },
   "auth": {
     "backHome": "Back to Home",
