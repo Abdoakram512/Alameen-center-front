@@ -565,47 +565,14 @@
             <button
               type="button"
               data-cat="all"
-              class="catalog-filter active px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#012383] text-white cursor-pointer"
-              data-i18n="catalog.allCategories"
+              class="catalog-filter active px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#012383] text-white cursor-pointer shadow-xs"
             >
-              جميع التصنيفات
-            </button>
-            <button
-              type="button"
-              data-cat="speech"
-              class="catalog-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#EAF1FB] text-[#0B2A8F] hover:bg-[#DEE8F7] cursor-pointer"
-              data-i18n="catalog.catSpeech"
-            >
-              تخاطب ونطق
-            </button>
-            <button
-              type="button"
-              data-cat="behavior"
-              class="catalog-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#EAF1FB] text-[#0B2A8F] hover:bg-[#DEE8F7] cursor-pointer"
-              data-i18n="catalog.catBehavior"
-            >
-              تعديل سلوك
-            </button>
-            <button
-              type="button"
-              data-cat="early"
-              class="catalog-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#EAF1FB] text-[#0B2A8F] hover:bg-[#DEE8F7] cursor-pointer"
-              data-i18n="catalog.catEarly"
-            >
-              التدخل المبكر
-            </button>
-            <button
-              type="button"
-              data-cat="learning"
-              class="catalog-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#EAF1FB] text-[#0B2A8F] hover:bg-[#DEE8F7] cursor-pointer"
-              data-i18n="catalog.catLearning"
-            >
-              صعوبات تعلّم
+              كورس التخاطب
             </button>
           </div>
 
-          <span class="text-xs font-bold text-[#0B2A8F] bg-[#EAF1FB] px-3 py-1 rounded-full">
-            ٦ مسارات تدريبية متاحة
+          <span class="text-xs font-bold text-[#0B2A8F] bg-[#EAF1FB] px-3.5 py-1.5 rounded-full border border-[#DEE8F7]">
+            مسار التخاطب السريري للطلاب
           </span>
         </div>
 
@@ -649,7 +616,7 @@
                 مشمول بالاشتراك
               </span>
               <a href="./pages/course-details.html" class="px-4 py-2 bg-[#012383] hover:bg-[#0B2A8F] text-white text-xs font-bold rounded-xl transition-colors shadow-xs">
-                عرض تفاصيل الدورة
+                عرض تفاصيل الكورس
               </a>
             </div>
           </div>
@@ -691,13 +658,13 @@
                 مشمول بالاشتراك
               </span>
               <a href="./pages/course-details.html" class="px-4 py-2 bg-[#012383] hover:bg-[#0B2A8F] text-white text-xs font-bold rounded-xl transition-colors shadow-xs">
-                عرض تفاصيل الدورة
+                عرض تفاصيل الكورس
               </a>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="reveal-on-scroll course-card bg-white border border-[#DEE8F7] hover:border-[#0B2A8F] rounded-[20px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between" style="transition-delay: 300ms;" data-category="learning" data-title="أساسيات التخاطب">
+          <div class="reveal-on-scroll course-card bg-white border border-[#DEE8F7] hover:border-[#0B2A8F] rounded-[20px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between" style="transition-delay: 300ms;" data-category="speech" data-title="أساسيات التخاطب">
             <div>
               <div class="h-48 w-full bg-[#152D4D] relative overflow-hidden">
                 <img src="/assets/images/course-topic-foundations.png" alt="أساسيات التخاطب" class="size-full object-cover" />
@@ -708,7 +675,7 @@
               </div>
               <div class="p-5 flex flex-col gap-3">
                 <div class="flex items-center justify-between text-xs font-bold">
-                  <span class="text-[#0B2A8F] bg-[#EAF1FB] px-2.5 py-0.5 rounded-md">صعوبات تعلّم</span>
+                  <span class="text-[#0B2A8F] bg-[#EAF1FB] px-2.5 py-0.5 rounded-md">تخاطب ونطق</span>
                   <div class="flex items-center gap-1 text-[#F59E0B]">
                     <span>★ 4.9</span>
                     <span class="text-slate-400 font-normal">(520)</span>
@@ -733,7 +700,7 @@
                 مشمول بالاشتراك
               </span>
               <a href="./pages/course-details.html" class="px-4 py-2 bg-[#012383] hover:bg-[#0B2A8F] text-white text-xs font-bold rounded-xl transition-colors shadow-xs">
-                عرض تفاصيل الدورة
+                عرض تفاصيل الكورس
               </a>
             </div>
           </div>
@@ -745,7 +712,7 @@
             href="./pages/courses.html"
             class="px-8 py-3.5 bg-[#EAF1FB] hover:bg-[#DEE8F7] text-[#012383] text-sm font-bold rounded-2xl transition-all shadow-xs flex items-center gap-2"
           >
-            <span>استعراض كافة الدورات في صفحة مستقلة</span>
+            <span>استعراض محتوى الكورس في صفحة مستقلة</span>
             <span class="text-xs">←</span>
           </a>
         </div>
@@ -1313,92 +1280,50 @@
 
             </div>
 
-            <!-- Column 2: مسارات التخاطب المتخصصة (Lg: 3 cols) -->
-            <div class="lg:col-span-3 flex flex-col gap-4">
+            <!-- Column 2: كورس التخاطب (Lg: 4 cols) -->
+            <div class="lg:col-span-4 flex flex-col gap-4">
               <div class="flex items-center gap-2">
                 <span class="w-1.5 h-4 rounded-full bg-[#10B77F]"></span>
                 <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
-                  مسارات التخاطب المتخصصة
+                  كورس التخاطب
                 </h4>
               </div>
               <ul class="flex flex-col gap-2.5 text-xs font-semibold text-blue-200/75">
                 <li>
                   <a href="#courses" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
                     <span class="text-blue-400">›</span>
-                    تأهيل وتنمية اللغة والتواصل
+                    محاور كورس التخاطب الشامل
                   </a>
                 </li>
                 <li>
                   <a href="#courses" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
                     <span class="text-blue-400">›</span>
-                    علاج اضطرابات مخارج الحروف
+                    استراتيجيات تنمية اللغة والتواصل
                   </a>
                 </li>
                 <li>
                   <a href="#courses" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
                     <span class="text-blue-400">›</span>
-                    برامج علاج التلعثم والطلاقة
+                    تطبيقات مخارج الحروف والأصوات
                   </a>
                 </li>
                 <li>
                   <a href="#courses" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
                     <span class="text-blue-400">›</span>
-                    التدخل المبكر والتأهيل السلوكي
+                    التدريب السريري لاضطرابات النطق
                   </a>
                 </li>
                 <li>
-                  <a href="#courses" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                  <a href="#about" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
                     <span class="text-blue-400">›</span>
-                    الممارسة السريرية للطلاب
+                    منهجية التعلّم والممارسة السريرية
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- Column 3: الاعتماد والخدمات (Lg: 2 cols) -->
-            <div class="lg:col-span-2 flex flex-col gap-4">
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-4 rounded-full bg-blue-400"></span>
-                <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
-                  الخدمات والاعتماد
-                </h4>
-              </div>
-              <ul class="flex flex-col gap-2.5 text-xs font-semibold text-blue-200/75">
-                <li>
-                  <a href="./pages/certificate.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
-                    <span class="text-blue-400">›</span>
-                    الشهادات المعتمدة و QR
-                  </a>
-                </li>
-                <li>
-                  <a href="./pages/dashboard.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
-                    <span class="text-blue-400">›</span>
-                    لوحة متابعة الطالب
-                  </a>
-                </li>
-                <li>
-                  <a href="./pages/my-grades.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
-                    <span class="text-blue-400">›</span>
-                    سجل الدرجات والتقارير
-                  </a>
-                </li>
-                <li>
-                  <a href="./pages/lesson.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
-                    <span class="text-blue-400">›</span>
-                    دروس وتطبيقات تجريبية
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
-                    <span class="text-blue-400">›</span>
-                    طلب استشارة متخصصة
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Column 4: قنوات الدعم المباشرة (Lg: 3 cols) -->
-            <div class="lg:col-span-3 flex flex-col gap-4">
+            <!-- Column 3: قنوات الدعم المباشرة (Lg: 4 cols) -->
+            <div class="lg:col-span-4 flex flex-col gap-4">
               <div class="flex items-center gap-2">
                 <span class="w-1.5 h-4 rounded-full bg-amber-400"></span>
                 <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
@@ -1420,7 +1345,7 @@
                   </div>
                   <div class="flex flex-col">
                     <span class="text-[10px] text-blue-300 font-bold">البريد الأكاديمي</span>
-                    <a href="mailto:support@alameen-center.com" class="font-medium hover:text-white transition-colors">support@alameen-center.com</a>
+                    <a href="mailto:support@alameen.edu.sa" class="font-medium hover:text-white transition-colors">support@alameen.edu.sa</a>
                   </div>
                 </div>
 
@@ -1430,7 +1355,7 @@
                   </div>
                   <div class="flex flex-col">
                     <span class="text-[10px] text-blue-300 font-bold">واتساب المباشر</span>
-                    <span class="font-medium text-white dir-ltr text-start">+966 50 123 4567</span>
+                    <a href="https://wa.me/966501234567" target="_blank" rel="noopener noreferrer" class="font-medium text-white dir-ltr text-start hover:text-emerald-400 transition-colors">+966 50 123 4567</a>
                   </div>
                 </div>
 
@@ -1440,7 +1365,7 @@
                   </div>
                   <div class="flex flex-col">
                     <span class="text-[10px] text-blue-300 font-bold">أوقات العمل</span>
-                    <span class="font-medium text-blue-100/80">السبت - الخميس (٩:٠٠ ص - ٩:٠٠ م)</span>
+                    <span class="font-medium text-blue-100/80">السبت - الخميس (٨:٠٠ ص - ١٠:٠٠ م)</span>
                   </div>
                 </div>
               </div>
