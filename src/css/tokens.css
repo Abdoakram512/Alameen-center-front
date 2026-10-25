@@ -1,0 +1,68 @@
+:root {
+  /* Primitive Colors (Extracted from Figma 1:249) */
+  --color-brand-navy: #012383;
+  --color-primary-navy: #0B2A8F;
+  --color-body-slate: #475569;
+  --color-surface-soft: #EAF1FB;
+  --color-bg-header: #FAFCFF;
+  --color-border-divider: #DEE8F7;
+  --color-pale-blue: #CFDBEA;
+  --color-white: #FFFFFF;
+
+  /* Photo Support & Contrast Colors */
+  --color-photo-1: #DCE8F2;
+  --color-photo-2: #152D4D;
+  --color-photo-3: #EDF2F7;
+  --color-photo-4: #203C60;
+
+  /* Shadows */
+  --shadow-subtle: 0px 4px 20px rgba(1, 35, 131, 0.04);
+  --shadow-card: 0px 8px 30px rgba(11, 42, 143, 0.06);
+  --shadow-certificate: 0px 20px 60px rgba(1, 35, 131, 0.08);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+
+/* Bi-directional Dynamic Fonts */
+:root[lang="ar"],
+html[dir="rtl"] {
+  --font-display: 'Baloo Bhaijaan 2', cursive, sans-serif;
+  --font-body: 'Cairo', sans-serif;
+}
+
+:root[lang="en"],
+html[dir="ltr"] {
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-body-slate);
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Logical RTL Flipping Helpers */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir="ltr"] .ltr-flip {
+  transform: scaleX(-1);
+}

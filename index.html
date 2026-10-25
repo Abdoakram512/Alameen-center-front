@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الأمين | منصة تعليمية لكورسات التخاطب</title>
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Stylesheet with Tailwind and Design Tokens -->
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+  <body class="bg-[#FAFCFF] min-h-screen text-[#475569] font-body antialiased flex flex-col justify-between selection:bg-[#EAF1FB] selection:text-[#0B2A8F]">
+    
+    <!-- ============================================== -->
+    <!-- 1440px x 900px Canvas Frame (Node 1:321 - Design) -->
+    <!-- ============================================== -->
+    <div class="w-full max-w-[1440px] mx-auto min-h-screen flex flex-col justify-between relative bg-[#FAFCFF]" id="landing-frame">
+      
+      <!-- ============================================== -->
+      <!-- HEADER (Node 1130:4 - px-[48px] py-[14px] / h-[176px]) -->
+      <!-- ============================================== -->
+      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-6 lg:px-[48px] py-3 lg:py-0 lg:h-[176px] shrink-0 z-20" data-node-id="1130:4">
+        
+        <!-- Brand (Node 1132:4 - h-[128px] gap-[16px]) -->
+        <!-- In RTL: Sits on the Right (First flex item) -->
+        <a href="/" class="flex gap-[16px] h-[80px] lg:h-[128px] items-center order-1 shrink-0" data-node-id="1132:4">
+          <div class="size-[70px] lg:size-[128px] shrink-0 relative" data-node-id="1128:29">
+            <img src="/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain pointer-events-none" />
+          </div>
+          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[32px] sm:text-[42px] lg:text-[56px] leading-[72px] text-[#012383] whitespace-nowrap tracking-tight" data-node-id="1:358" data-i18n="brand.name">
+            منصة الأمين
+          </span>
+        </a>
+
+        <!-- Middle: Nav Links (Node 1130:8 - gap-[16px]) -->
+        <!-- In RTL: Flows from Right (الرئيسية near Brand) to Left (تواصل معنا near Button) -->
+        <nav class="hidden lg:flex gap-[16px] items-center order-2 shrink-0" data-node-id="1130:8">
+          
+          <!-- Active Nav Item: الرئيسية (Node 1137:84) -->
+          <div class="bg-[#EAF1FB] flex items-center justify-center px-[18px] py-[10px] rounded-[16px] shrink-0" data-node-id="1137:84">
+            <a href="/" class="text-[#0B2A8F] text-[22px] font-bold font-['Cairo'] whitespace-nowrap" data-node-id="1137:4" data-i18n="landing.navHome">
+              الرئيسية
+            </a>
+          </div>
+
+          <!-- Nav — الدورات (Node 1137:107) -->
+          <div class="flex h-[61px] items-center justify-center px-[4px] py-[10px] shrink-0" data-node-id="1137:107">
+            <a href="/pages/courses.html" class="text-[#475569] hover:text-[#012383] text-[22px] font-semibold font-['Cairo'] whitespace-nowrap transition-colors" data-node-id="1137:58" data-i18n="landing.navCourses">
+              الدورات
+            </a>
+          </div>
+
+          <!-- Nav — من نحن (Node 1137:106) -->
+          <div class="flex h-[61px] items-center justify-center px-[4px] py-[10px] shrink-0" data-node-id="1137:106">
+            <a href="#about" class="text-[#475569] hover:text-[#012383] text-[22px] font-semibold font-['Cairo'] whitespace-nowrap transition-colors" data-node-id="1:353" data-i18n="landing.navAbout">
+              من نحن
+            </a>
+          </div>
+
+          <!-- Nav — آراء الطلاب (Node 1137:105) -->
+          <div class="flex h-[61px] items-center justify-center px-[4px] py-[10px] shrink-0" data-node-id="1137:105">
+            <a href="/pages/reviews.html" class="text-[#475569] hover:text-[#012383] text-[22px] font-semibold font-['Cairo'] whitespace-nowrap transition-colors" data-node-id="1:355" data-i18n="landing.navTestimonials">
+              آراء الطلاب
+            </a>
+          </div>
+
+          <!-- Nav — تواصل معنا (Node 1137:103) -->
+          <div class="flex h-[61px] items-center justify-center px-[4px] py-[10px] shrink-0" data-node-id="1137:103">
+            <a href="/pages/contact.html" class="text-[#475569] hover:text-[#012383] text-[22px] font-semibold font-['Cairo'] whitespace-nowrap transition-colors" data-node-id="1:356" data-i18n="landing.navContact">
+              تواصل معنا
+            </a>
+          </div>
+
+        </nav>
+
+        <!-- Left Group (In RTL: Sits on the Left / Last flex item) -->
+        <div class="flex items-center gap-3 order-3 shrink-0">
+          
+          <!-- Interactive Language Switcher Pill -->
+          <div class="relative" id="lang-switcher">
+            <button
+              type="button"
+              id="lang-toggle-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#D7E3F5]/60 shadow-xs"
+            >
+              <svg class="w-4 h-4 text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
+              </svg>
+              <span id="current-lang-label">العربية</span>
+              <svg class="w-3 h-3 text-[#475569]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="lang-dropdown"
+              class="hidden absolute start-0 top-full mt-2 w-36 rounded-xl bg-white shadow-xl border border-[#DEE8F7] py-1.5 z-50 transition-all"
+            >
+              <button
+                type="button"
+                data-set-lang="ar"
+                class="w-full flex items-center justify-between px-3.5 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] font-semibold cursor-pointer text-start"
+              >
+                <span>العربية</span>
+                <span class="text-[10px] text-[#0B2A8F] font-bold px-1.5 py-0.5 rounded bg-blue-100">RTL</span>
+              </button>
+              <button
+                type="button"
+                data-set-lang="en"
+                class="w-full flex items-center justify-between px-3.5 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] font-semibold cursor-pointer text-start"
+              >
+                <span>English</span>
+                <span class="text-[10px] text-slate-500 font-bold px-1.5 py-0.5 rounded bg-slate-100">LTR</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Button: تسجيل الدخول (Node 1130:9 - 184px x 69px) -->
+          <a
+            href="/pages/login.html"
+            class="bg-[#012383] drop-shadow-[0px_8px_10px_rgba(11,42,143,0.1)] hover:bg-[#0B2A8F] flex items-center justify-center px-[28px] py-[16px] rounded-[40px] text-white text-[18px] lg:text-[20px] font-bold font-['Cairo'] transition-all shadow-md cursor-pointer whitespace-nowrap min-w-[150px] lg:min-w-[184px] h-[54px] lg:h-[69px]"
+            data-node-id="1130:9"
+            data-i18n="landing.loginBtn"
+          >
+            تسجيل الدخول
+          </a>
+
+        </div>
+
+      </header>
+
+      <!-- ============================================== -->
+      <!-- MAIN HERO SECTION (Node 1111:5 & Node 1137:24) -->
+      <!-- ============================================== -->
+      <main class="w-full flex-1 flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[48px] py-8 lg:py-6 gap-10 lg:gap-12 my-auto">
+        
+        <!-- Hero Text (Node 1111:5 - In RTL: Sits on the Right - 720px width x 538px height) -->
+        <div class="w-full lg:w-[720px] flex flex-col items-start rtl:items-end justify-between rtl:text-right ltr:text-left shrink-0 order-1 gap-6 lg:gap-[24px]" data-node-id="1111:5">
+          
+          <!-- Eyebrow (Node 1137:85 - 28px Cairo Bold) -->
+          <p class="font-['Cairo'] font-bold text-[22px] sm:text-[26px] lg:text-[28px] leading-[42px] text-[#0B2A8F] whitespace-nowrap" data-node-id="1137:85" data-i18n="landing.eyebrow">
+            التعلّم يبدأ بخطوة
+          </p>
+
+          <!-- Hero Titles Box (Node 1111:6 - gap 24px) -->
+          <div class="flex flex-col gap-[24px] items-start rtl:items-end w-full" data-node-id="1111:6">
+            <!-- Hero Title (Node 1:367 - 76px Baloo Bhaijaan 2 Bold) -->
+            <h1 class="font-['Baloo_Bhaijaan_2'] font-bold text-[44px] sm:text-[60px] lg:text-[76px] leading-[1.1] lg:leading-[80px] text-[#012383] w-full tracking-tight" data-node-id="1:367" data-i18n="landing.heroTitle">
+              منصة تعليمية لكورسات التخاطب
+            </h1>
+
+            <!-- Hero Description (Node 1:368 - 24px Cairo Medium) -->
+            <p class="font-['Cairo'] font-medium text-[18px] lg:text-[24px] leading-[1.8] lg:leading-[1.9] text-[#475569] w-full" data-node-id="1:368" data-i18n="landing.heroDesc">
+              تقدّم مسارات تدريبية متكاملة لتعلم أساليب التخاطب، بتجربة تعليمية مرنة وسهلة على الطلاب.
+            </p>
+          </div>
+
+          <!-- Hero Actions (Node 1142:4 - CTA 320px x 80px) -->
+          <div class="flex items-center pt-2" data-node-id="1142:4">
+            <a
+              href="/pages/dashboard.html"
+              class="w-[280px] sm:w-[320px] h-[72px] lg:h-[80px] bg-[#0B2A8F] hover:bg-[#012383] drop-shadow-[0px_4px_6px_rgba(11,42,143,0.12)] flex items-center justify-center rounded-[20px] text-white font-['Cairo'] font-extrabold text-[22px] lg:text-[24px] leading-[32px] shadow-xl hover:shadow-2xl transition-all cursor-pointer whitespace-nowrap"
+              data-node-id="1137:5"
+            >
+              <span data-node-id="1137:6" data-i18n="landing.ctaStart">ابدأ الآن</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Photo Grid (Node 1137:24 - In RTL: Sits on the Left - 540px x 540px) -->
+        <!-- Fixed 2x2 LTR coordinate layout so quadrants match Figma pixel-for-pixel -->
+        <div class="w-full max-w-[540px] h-[540px] shrink-0 order-2" dir="ltr" data-node-id="1137:24">
+          <div class="grid grid-cols-2 gap-[16px] size-full">
+            
+            <!-- Quadrant 1 (Top-Left): Girl with magnifying glass in circle (Node 1137:26) -->
+            <div class="bg-[#DCE8F2] overflow-hidden rounded-[131px] size-[262px] relative shadow-sm hover:scale-[1.02] transition-transform" data-node-id="1137:26">
+              <img src="/assets/images/photo1.png" alt="التدريب العملي" class="size-full object-cover pointer-events-none" data-node-id="1137:27" />
+            </div>
+
+            <!-- Quadrant 2 (Top-Right): Woman on chair with laptop & Play button (Node 1137:28) -->
+            <div class="bg-[#152D4D] overflow-hidden rounded-[20px] size-[262px] relative shadow-sm group hover:scale-[1.02] transition-transform cursor-pointer" data-node-id="1137:28">
+              <img src="/assets/images/photo2.png" alt="تنمية المهارات" class="size-full object-cover pointer-events-none" data-node-id="1137:29" />
+              <!-- Centered Play Button (Node 1137:30) -->
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[60px] group-hover:scale-110 transition-transform" data-node-id="1137:30">
+                <img src="/assets/images/play.svg" alt="تشغيل" class="size-full" />
+              </div>
+            </div>
+
+            <!-- Quadrant 3 (Bottom-Left): Man on laptop & Play button (Node 1137:33) -->
+            <div class="bg-[#EDF2F7] overflow-hidden rounded-[20px] size-[262px] relative shadow-sm group hover:scale-[1.02] transition-transform cursor-pointer" data-node-id="1137:33">
+              <img src="/assets/images/photo3.png" alt="الجلسات التفاعلية" class="size-full object-cover pointer-events-none" data-node-id="1137:34" />
+              <!-- Centered Play Button (Node 1137:35) -->
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[60px] group-hover:scale-110 transition-transform" data-node-id="1137:35">
+                <img src="/assets/images/play.svg" alt="تشغيل" class="size-full" />
+              </div>
+            </div>
+
+            <!-- Quadrant 4 (Bottom-Right): Boy holding apple card + leaves (Node 1137:37) -->
+            <div class="bg-[#203C60] overflow-hidden rounded-tl-[20px] rounded-bl-[20px] rounded-tr-[131px] rounded-br-[131px] size-[262px] relative shadow-sm hover:scale-[1.02] transition-transform" data-node-id="1137:37">
+              <!-- Decorative Leaves on Left Side (Node 1137:37) -->
+              <div class="absolute left-[16px] top-[90px] z-0 flex flex-col gap-1 pointer-events-none opacity-85">
+                <svg class="w-[34px] h-[34px] -rotate-12" viewBox="0 0 32 32" fill="none">
+                  <path d="M4 16C4 7 13 4 28 4C28 19 19 28 4 16Z" fill="#7E95B1"/>
+                </svg>
+                <svg class="w-[34px] h-[34px] rotate-45 -mt-2.5" viewBox="0 0 32 32" fill="none">
+                  <path d="M4 16C4 7 13 4 28 4C28 19 19 28 4 16Z" fill="#7E95B1"/>
+                </svg>
+              </div>
+              <img src="/assets/images/photo4.png" alt="الاعتماد الأكاديمي" class="size-full object-cover pointer-events-none relative z-10" data-node-id="1137:38" />
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+      <!-- ============================================== -->
+      <!-- LEARNING JOURNEY FOOTER BAR (Node 1137:86)     -->
+      <!-- Width: 1344px (left 48px, top 804px, h 72px)   -->
+      <!-- ============================================== -->
+      <footer class="w-full border-t border-[#DEE8F7] px-6 lg:px-[48px] py-4 lg:py-0 lg:h-[72px] flex flex-wrap items-center justify-between shrink-0 z-10 gap-4" data-node-id="1137:86">
+        
+        <!-- Journey Title (Node 1137:96 - In RTL: Sits on the Right) -->
+        <p class="font-['Cairo'] font-bold text-[20px] lg:text-[24px] text-[#0B2A8F] whitespace-nowrap order-1" data-node-id="1137:96" data-i18n="landing.journeyTitle">
+          رحلتك مع الأمين
+        </p>
+
+        <!-- Step 1: اختر مسارك (Node 1137:93) -->
+        <div class="flex gap-[14px] items-center order-2" data-node-id="1137:93">
+          <div class="size-[8px] shrink-0" data-node-id="1137:95">
+            <img src="/assets/images/ellipse.svg" alt="" class="size-full" />
+          </div>
+          <p class="font-['Cairo'] font-medium text-[16px] lg:text-[20px] text-[#475569] whitespace-nowrap" data-node-id="1137:94" data-i18n="landing.step1">
+            اختر مسارك
+          </p>
+        </div>
+
+        <!-- Step 2: تعلم بأسلوبك (Node 1137:90) -->
+        <div class="flex gap-[14px] items-center order-3" data-node-id="1137:90">
+          <div class="size-[8px] shrink-0" data-node-id="1137:92">
+            <img src="/assets/images/ellipse.svg" alt="" class="size-full" />
+          </div>
+          <p class="font-['Cairo'] font-medium text-[16px] lg:text-[20px] text-[#475569] whitespace-nowrap" data-node-id="1137:91" data-i18n="landing.step2">
+            تعلّم بأسلوبك
+          </p>
+        </div>
+
+        <!-- Step 3: طور مهاراتك (Node 1137:87 - In RTL: Sits on the Left) -->
+        <div class="flex gap-[14px] items-center order-4" data-node-id="1137:87">
+          <div class="size-[8px] shrink-0" data-node-id="1137:89">
+            <img src="/assets/images/ellipse.svg" alt="" class="size-full" />
+          </div>
+          <p class="font-['Cairo'] font-medium text-[16px] lg:text-[20px] text-[#475569] whitespace-nowrap" data-node-id="1137:88" data-i18n="landing.step3">
+            طوّر مهاراتك
+          </p>
+        </div>
+
+      </footer>
+
+    </div>
+
+    <!-- Script loading for multi-language engine -->
+    <script type="module" src="/src/js/i18n.js"></script>
+  </body>
+</html>
