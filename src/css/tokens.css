@@ -2,7 +2,7 @@
   /* Primitive Colors (Extracted from Figma 1:249) */
   --color-brand-navy: #012383;
   --color-primary-navy: #0B2A8F;
-  --color-body-slate: #475569;
+  --color-body-slate: #334155;
   --color-surface-soft: #EAF1FB;
   --color-bg-header: #FAFCFF;
   --color-border-divider: #DEE8F7;
@@ -48,6 +48,9 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-display {

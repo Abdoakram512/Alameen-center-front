@@ -17,62 +17,76 @@
     <div class="w-full max-w-[1440px] mx-auto min-h-screen flex flex-col justify-between relative bg-[#FAFCFF]">
       
       <!-- ============================================== -->
-      <!-- HEADER (WorkDo Clean Header Architecture)       -->
+      <!-- UNIFIED MASTER HEADER                          -->
       <!-- ============================================== -->
-      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-6 lg:px-[48px] py-4 shrink-0 z-20">
+      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-4 sm:px-6 lg:px-[48px] h-[80px] sm:h-[88px] lg:h-[95px] shrink-0 z-30 relative">
         
         <!-- Brand Identity -->
-        <a href="/" class="flex gap-3 items-center shrink-0 cursor-pointer">
-          <div class="size-[48px] shrink-0 relative">
+        <a href="/" class="flex gap-2.5 sm:gap-3 lg:gap-[14px] items-center shrink-0 cursor-pointer">
+          <div class="size-[42px] sm:size-[52px] lg:size-[64px] shrink-0 relative">
             <img src="/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain pointer-events-none" />
           </div>
-          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[26px] text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
+          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[22px] sm:text-[30px] lg:text-[38px] leading-tight text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
             منصة الأمين
           </span>
         </a>
 
         <!-- Main Navigation Links -->
-        <nav class="hidden md:flex gap-2 items-center shrink-0">
-          <a href="/" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navHome">
+        <nav class="hidden lg:flex gap-[6px] xl:gap-[12px] items-center shrink-0">
+          
+          <!-- الرئيسية -->
+          <a href="/" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navHome">
             الرئيسية
           </a>
-          <a href="/pages/courses.html" class="px-4 py-2 bg-[#EAF1FB] text-[#0B2A8F] text-base font-bold rounded-xl transition-colors" data-i18n="landing.navCourses">
+
+          <!-- Active: الدورات -->
+          <a href="/pages/courses.html" class="px-4 py-2 bg-[#EAF1FB] text-[#0B2A8F] text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navCourses">
             الدورات
           </a>
-          <a href="/pages/reviews.html" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navTestimonials">
+
+          <!-- من نحن -->
+          <a href="/#about" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navAbout">
+            من نحن
+          </a>
+
+          <!-- آراء الطلاب -->
+          <a href="/pages/reviews.html" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navTestimonials">
             آراء الطلاب
           </a>
-          <a href="/pages/contact.html" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navContact">
+
+          <!-- تواصل معنا -->
+          <a href="/pages/contact.html" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navContact">
             تواصل معنا
           </a>
+
         </nav>
 
-        <!-- Right / Utility Actions -->
-        <div class="flex items-center gap-3 shrink-0">
+        <!-- Left Group (Language Switcher & Auth) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
           
-          <!-- Language Switcher Pill -->
+          <!-- Interactive Language Switcher Pill -->
           <div class="relative" id="lang-switcher">
             <button
               type="button"
               id="lang-toggle-btn"
               aria-haspopup="true"
               aria-expanded="false"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#DEE8F7]/70 shadow-xs"
+              class="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 h-[36px] sm:h-[40px] rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#D7E3F5]/80 shadow-xs"
             >
               <svg class="size-3.5 text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
               </svg>
               <span id="current-lang-label">العربية</span>
-              <svg class="size-3 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              <svg class="size-2.5 sm:size-3 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
 
-            <!-- Language Dropdown -->
+            <!-- Dropdown Menu -->
             <div
               id="lang-dropdown"
-              class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
+              class="hidden absolute start-0 top-[calc(100%+8px)] w-36 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
             >
               <button
                 type="button"
@@ -80,7 +94,7 @@
                 class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
               >
                 <span>العربية</span>
-                <svg class="size-4 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="size-3.5 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
               </button>
@@ -90,29 +104,46 @@
                 class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
               >
                 <span>English</span>
-                <svg class="size-4 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="size-3.5 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
               </button>
             </div>
           </div>
 
-          <div class="h-5 w-px bg-[#DEE8F7]"></div>
-
-          <!-- Student Dashboard / Profile Link -->
+          <!-- Button: تسجيل الدخول -->
           <a
-            href="/pages/dashboard.html"
-            class="flex items-center gap-2.5 bg-white border border-[#DEE8F7] px-3.5 py-1.5 rounded-full hover:bg-[#EAF1FB]/50 transition-all shadow-xs"
+            href="/pages/login.html"
+            class="bg-[#012383] hover:bg-[#0B2A8F] flex items-center justify-center px-4 sm:px-6 h-[36px] sm:h-[40px] rounded-full text-white text-xs sm:text-sm font-bold font-['Cairo'] transition-all shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+            data-i18n="landing.loginBtn"
           >
-            <div class="size-7 rounded-full bg-[#EAF1FB] flex items-center justify-center shrink-0">
-              <span class="font-bold text-xs text-[#0B2A8F]" data-i18n="header.studentInitial">م</span>
-            </div>
-            <span class="text-xs font-bold text-[#012383] hidden sm:inline" data-i18n="header.studentName">مريم أحمد</span>
+            تسجيل الدخول
           </a>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            aria-label="القائمة الرئيسية"
+            class="lg:hidden flex items-center justify-center size-[36px] rounded-xl bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-colors cursor-pointer"
+          >
+            <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
         </div>
 
       </header>
+
+      <!-- Mobile Dropdown Navigation Menu -->
+      <div id="mobile-nav-menu" class="hidden lg:hidden w-full bg-[#FAFCFF] border-b border-[#D7E3F5] px-4 py-3 flex-col gap-1.5 z-20 shadow-md">
+        <a href="/" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navHome">الرئيسية</a>
+        <a href="/pages/courses.html" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm bg-[#EAF1FB] text-[#0B2A8F]" data-i18n="landing.navCourses">الدورات</a>
+        <a href="/#about" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navAbout">من نحن</a>
+        <a href="/pages/reviews.html" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navTestimonials">آراء الطلاب</a>
+        <a href="/pages/contact.html" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navContact">تواصل معنا</a>
+      </div>
 
       <!-- ============================================== -->
       <!-- MAIN PAGE CONTENT                              -->
@@ -126,7 +157,7 @@
             <span data-i18n="catalog.eyebrow">دليل البرامج والدورات</span>
           </div>
 
-          <h1 class="font-['Baloo_Bhaijaan_2'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#012383] tracking-tight leading-tight" data-i18n="catalog.heroTitle">
+          <h1 class="font-['Cairo'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#012383] tracking-tight leading-tight" data-i18n="catalog.heroTitle">
             استكشف دورات التخاطب المتخصصة
           </h1>
 
@@ -208,7 +239,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="catalog-courses-grid">
             
             <!-- Course Card 1: Language Development Strategies -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="استراتيجيات تنمية اللغة">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="استراتيجيات تنمية اللغة">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#012383] relative overflow-hidden">
@@ -229,7 +260,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     استراتيجيات تنمية اللغة والتواصل
                   </h3>
 
@@ -262,7 +293,7 @@
             </div>
 
             <!-- Course Card 2: Articulation Disorders Applications -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="تطبيقات مخارج الحروف">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="تطبيقات مخارج الحروف">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#0B2A8F] relative overflow-hidden">
@@ -283,7 +314,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     تطبيقات مخارج الحروف وتصحيح النطق
                   </h3>
 
@@ -316,7 +347,7 @@
             </div>
 
             <!-- Course Card 3: Speech Therapy Fundamentals -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="learning" data-title="أساسيات التخاطب">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="learning" data-title="أساسيات التخاطب">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#152D4D] relative overflow-hidden">
@@ -337,7 +368,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     أساسيات التخاطب والتقييم اللغوي
                   </h3>
 
@@ -370,7 +401,7 @@
             </div>
 
             <!-- Course Card 4: Stuttering & Fluency Management -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="behavior" data-title="إدارة التأتأة والطلاقة الكلامية">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="behavior" data-title="إدارة التأتأة والطلاقة الكلامية">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#0B2A8F] relative overflow-hidden">
@@ -391,7 +422,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     إدارة التأتأة وتعزيز الطلاقة الكلامية
                   </h3>
 
@@ -424,7 +455,7 @@
             </div>
 
             <!-- Course Card 5: Autism Communication -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="early" data-title="التدخل المبكر لأطفال طيف التوحد">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="early" data-title="التدخل المبكر لأطفال طيف التوحد">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#152D4D] relative overflow-hidden">
@@ -445,7 +476,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     التدخل المبكر لتطوير التواصل لأطفال التوحد
                   </h3>
 
@@ -478,7 +509,7 @@
             </div>
 
             <!-- Course Card 6: Parent Training Workshop -->
-            <div class="course-card bg-white border border-[#DEE8F7] rounded-[24px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="تدريب الوالدين على تنمية التواصل اليومي">
+            <div class="course-card bg-white border border-[#DEE8F7] rounded-[18px] overflow-hidden shadow-xs hover:shadow-card hover:-translate-y-1 transition-all flex flex-col justify-between" data-category="speech" data-title="تدريب الوالدين على تنمية التواصل اليومي">
               <div>
                 <!-- Thumbnail -->
                 <div class="h-48 w-full bg-[#012383] relative overflow-hidden">
@@ -499,7 +530,7 @@
                     </div>
                   </div>
 
-                  <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383] leading-snug">
+                  <h3 class="font-['Cairo'] font-bold text-[18px] md:text-[19px] text-[#012383] leading-snug">
                     تدريب الوالدين على تنمية التواصل اليومي
                   </h3>
 
@@ -620,5 +651,6 @@
         });
       });
     </script>
+    <script type="module" src="/src/js/i18n.js"></script>
   </body>
 </html>
