@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/Alameen-center-front/' : '/',
   plugins: [tailwindcss()],
   server: {
     port: 3000,

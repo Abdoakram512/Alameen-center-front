@@ -10,13 +10,16 @@ class I18nEngine {
     await this.loadTranslations(this.currentLang);
     this.applyLanguage(this.currentLang);
     this.setupDropdown();
+    this.setupMobileMenu();
     this.bindEvents();
   }
 
   async loadTranslations(lang) {
     if (!this.translations[lang]) {
       try {
-        const response = await fetch(`/locales/${lang}.json`);
+        const baseUrl = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || '/';
+        const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+        const response = await fetch(`${normalizedBase}locales/${lang}.json`);
         this.translations[lang] = await response.json();
       } catch (err) {
         console.error(`Failed to load ${lang} locale:`, err);
@@ -117,6 +120,26 @@ class I18nEngine {
         toggleBtn.setAttribute('aria-expanded', 'false');
         const caret = toggleBtn.querySelector('.lang-caret');
         if (caret) caret.style.transform = 'rotate(0deg)';
+      }
+    });
+  }
+
+  setupMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('mobile-nav-menu');
+    if (!toggleBtn || !navMenu) return;
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = navMenu.classList.contains('hidden');
+      navMenu.classList.toggle('hidden', !isHidden);
+      navMenu.classList.toggle('flex', isHidden);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.add('hidden');
+        navMenu.classList.remove('flex');
       }
     });
   }

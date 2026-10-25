@@ -27,60 +27,74 @@
       <!-- ============================================== -->
       <!-- HEADER (WorkDo Clean Header Architecture)       -->
       <!-- ============================================== -->
-      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-6 lg:px-[48px] py-4 shrink-0 z-20">
+      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-4 sm:px-6 lg:px-[48px] py-3 sm:py-4 shrink-0 z-20">
         
         <!-- Brand Identity -->
-        <a href="/" class="flex gap-3 items-center shrink-0 cursor-pointer">
-          <div class="size-[48px] shrink-0 relative">
+        <a href="../index.html" class="flex gap-2.5 sm:gap-3 lg:gap-[14px] items-center shrink-0 cursor-pointer">
+          <div class="size-[42px] sm:size-[52px] lg:size-[64px] shrink-0 relative">
             <img src="/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain pointer-events-none" />
           </div>
-          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[26px] text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
+          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[22px] sm:text-[30px] lg:text-[38px] leading-tight text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
             منصة الأمين
           </span>
         </a>
 
         <!-- Main Navigation Links -->
-        <nav class="hidden md:flex gap-2 items-center shrink-0">
-          <a href="/" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navHome">
+        <nav class="hidden lg:flex gap-[6px] xl:gap-[12px] items-center shrink-0">
+          
+          <!-- الرئيسية -->
+          <a href="../#home" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navHome">
             الرئيسية
           </a>
-          <a href="/pages/courses.html" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navCourses">
+
+          <!-- الدورات -->
+          <a href="../#courses" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navCourses">
             الدورات
           </a>
-          <a href="/pages/reviews.html" class="px-4 py-2 bg-[#EAF1FB] text-[#0B2A8F] text-base font-bold rounded-xl transition-colors" data-i18n="landing.navTestimonials">
+
+          <!-- من نحن -->
+          <a href="../#about" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navAbout">
+            من نحن
+          </a>
+
+          <!-- Active: آراء الطلاب -->
+          <a href="./reviews.html" class="px-4 py-2 bg-[#EAF1FB] text-[#0B2A8F] text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navTestimonials">
             آراء الطلاب
           </a>
-          <a href="/pages/contact.html" class="px-4 py-2 text-[#475569] hover:text-[#012383] text-base font-semibold rounded-xl hover:bg-[#EAF1FB]/50 transition-colors" data-i18n="landing.navContact">
+
+          <!-- تواصل معنا -->
+          <a href="../#contact" class="px-3.5 py-2 text-[#012383] hover:text-[#0B2A8F] hover:bg-[#EAF1FB]/50 text-[16px] xl:text-[18px] font-bold font-['Cairo'] rounded-[14px] whitespace-nowrap transition-colors" data-i18n="landing.navContact">
             تواصل معنا
           </a>
+
         </nav>
 
-        <!-- Right / Utility Actions -->
-        <div class="flex items-center gap-3 shrink-0">
+        <!-- Left Group (Language Switcher & Auth) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
           
-          <!-- Language Switcher Pill -->
+          <!-- Interactive Language Switcher Pill -->
           <div class="relative" id="lang-switcher">
             <button
               type="button"
               id="lang-toggle-btn"
               aria-haspopup="true"
               aria-expanded="false"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#DEE8F7]/70 shadow-xs"
+              class="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 h-[36px] sm:h-[40px] rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#D7E3F5]/80 shadow-xs"
             >
               <svg class="size-3.5 text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
               </svg>
               <span id="current-lang-label">العربية</span>
-              <svg class="size-3 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              <svg class="size-2.5 sm:size-3 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
 
-            <!-- Language Dropdown -->
+            <!-- Dropdown Menu -->
             <div
               id="lang-dropdown"
-              class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
+              class="hidden absolute start-0 top-[calc(100%+8px)] w-36 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
             >
               <button
                 type="button"
@@ -88,7 +102,7 @@
                 class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
               >
                 <span>العربية</span>
-                <svg class="size-4 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="size-3.5 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
               </button>
@@ -98,29 +112,46 @@
                 class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
               >
                 <span>English</span>
-                <svg class="size-4 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="size-3.5 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
               </button>
             </div>
           </div>
 
-          <div class="h-5 w-px bg-[#DEE8F7]"></div>
-
-          <!-- Student Dashboard / Profile Link -->
+          <!-- Button: تسجيل الدخول -->
           <a
-            href="/pages/dashboard.html"
-            class="flex items-center gap-2.5 bg-white border border-[#DEE8F7] px-3.5 py-1.5 rounded-full hover:bg-[#EAF1FB]/50 transition-all shadow-xs"
+            href="./login.html"
+            class="bg-[#012383] hover:bg-[#0B2A8F] flex items-center justify-center px-4 sm:px-6 h-[36px] sm:h-[40px] rounded-full text-white text-xs sm:text-sm font-bold font-['Cairo'] transition-all shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+            data-i18n="landing.loginBtn"
           >
-            <div class="size-7 rounded-full bg-[#EAF1FB] flex items-center justify-center shrink-0">
-              <span class="font-bold text-xs text-[#0B2A8F]" data-i18n="header.studentInitial">م</span>
-            </div>
-            <span class="text-xs font-bold text-[#012383] hidden sm:inline" data-i18n="header.studentName">مريم أحمد</span>
+            تسجيل الدخول
           </a>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            aria-label="القائمة الرئيسية"
+            class="lg:hidden flex items-center justify-center size-[36px] rounded-xl bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-colors cursor-pointer"
+          >
+            <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
         </div>
 
       </header>
+
+      <!-- Mobile Dropdown Navigation Menu -->
+      <div id="mobile-nav-menu" class="hidden lg:hidden w-full bg-[#FAFCFF] border-b border-[#D7E3F5] px-4 py-3 flex-col gap-1.5 z-20 shadow-md">
+        <a href="../#home" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navHome">الرئيسية</a>
+        <a href="../#courses" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navCourses">الدورات</a>
+        <a href="../#about" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navAbout">من نحن</a>
+        <a href="./reviews.html" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm bg-[#EAF1FB] text-[#0B2A8F]" data-i18n="landing.navTestimonials">آراء الطلاب</a>
+        <a href="../#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navContact">تواصل معنا</a>
+      </div>
 
       <!-- ============================================== -->
       <!-- MAIN PAGE CONTENT                              -->
@@ -137,12 +168,12 @@
             <span data-i18n="reviews.eyebrow">آراء وتقييمات الطلاب</span>
           </div>
 
-          <h1 class="font-['Baloo_Bhaijaan_2'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#012383] tracking-tight leading-tight" data-i18n="reviews.heroTitle">
+          <h1 class="font-['Cairo'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#012383] tracking-tight leading-tight" data-i18n="reviews.heroTitle">
             تجارب واقعية وقصص نجاح في رحلة التخاطب
           </h1>
 
           <p class="text-base sm:text-lg text-[#475569] max-w-2xl font-medium leading-relaxed" data-i18n="reviews.heroDesc">
-            اكتشف كيف ساعدت دورات منصة الأمين آلاف الطلاب والأمهات والأخصائيين في تطوير مهارات النطق والتواصل.
+            اكتشف كيف ساعدت دورات منصة الأمين آلاف الطلاب والدارسين في تطوير مهارات النطق والتخاطب السريري.
           </p>
 
           <!-- Trust Badges 4-Item Grid -->
@@ -183,7 +214,7 @@
             
             <!-- Left: Giant Score -->
             <div class="flex flex-col items-center justify-center text-center shrink-0 md:pe-8 md:border-e md:border-[#DEE8F7]">
-              <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-5xl text-[#012383]">4.9</span>
+              <span class="font-['Cairo'] font-extrabold text-5xl text-[#012383]">4.9</span>
               <div class="flex items-center gap-1 text-[#F59E0B] text-lg my-1.5">
                 ★★★★★
               </div>
@@ -248,7 +279,7 @@
             
             <div class="flex flex-col gap-2 relative z-10">
               <span class="text-xs font-bold text-blue-200 uppercase tracking-wider" data-i18n="reviews.eyebrow">صوت المتعلم</span>
-              <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-2xl" data-i18n="reviews.addReviewCardTitle">شاركنا تجربتك التعليمية</h3>
+              <h3 class="font-['Cairo'] font-bold text-2xl" data-i18n="reviews.addReviewCardTitle">شاركنا تجربتك التعليمية</h3>
               <p class="text-xs text-blue-100 font-medium leading-relaxed" data-i18n="reviews.addReviewCardDesc">
                 رأيك يساهم في إلهام غيرك وتطوير برامجنا التعليمية باستمرار.
               </p>
@@ -355,18 +386,18 @@
               <div class="flex text-[#F59E0B] text-sm">★★★★★</div>
             </div>
 
-            <h3 class="font-['Baloo_Bhaijaan_2'] font-bold text-xl text-[#012383]" data-i18n="reviews.spotlightTitle">
-              «تطوّر نطق طفلي خلال ٦ أسابيع من التمارين العملية المنتظمة»
+            <h3 class="font-['Cairo'] font-bold text-lg md:text-xl text-[#012383]" data-i18n="reviews.spotlightTitle">
+              «تطوّر مستواي في التشخيص السريري خلال ٦ أسابيع من التمارين العملية المنتظمة»
             </h3>
 
             <p class="text-sm text-[#475569] font-medium leading-relaxed" data-i18n="reviews.spotlightQuote">
-              كنت أبحث عن برنامج علمي موثوق لتنمية مهارات طفلي يوسف بعد تشخيص تأخر نمو اللغة. التمارين التفاعلية والتقييم الدقيق في منصة الأمين أحدثا فارقاً ملموساً في استجابته ووضوح كلماته.
+              كنت أبحث عن برنامج علمي وتطبيقي موثوق لتنمية مهاراتي في قيادة جلسات التخاطب. التمارين التفاعلية والتقييم الدقيق في منصة الأمين أحدثا فارقاً ملموساً في كفاءتي السريرية وثقتي المهنية.
             </p>
 
             <div class="flex items-center gap-3 pt-2 text-xs font-bold text-[#012383]">
-              <span data-i18n="reviews.spotlightAuthor">د. ريم القحطاني</span>
+              <span data-i18n="reviews.spotlightAuthor">د. عمر القحطاني</span>
               <span class="text-slate-300">•</span>
-              <span class="text-[#475569]" data-i18n="reviews.spotlightRole">ولية أمر وأخصائية نفسية</span>
+              <span class="text-[#475569]" data-i18n="reviews.spotlightRole">طالب وباحث في علوم التخاطب</span>
               <span class="text-slate-300">•</span>
               <span class="text-emerald-600 flex items-center gap-1 font-semibold">
                 <svg class="size-3.5" fill="currentColor" viewBox="0 0 20 20">
@@ -390,7 +421,7 @@
                     س
                   </div>
                   <div>
-                    <h4 class="text-sm font-bold text-[#012383]">سارة المنصور</h4>
+                    <h4 class="text-sm font-bold text-[#012383]">سامي المنصور</h4>
                     <span class="text-[11px] text-[#475569]">منذ أسبوعين</span>
                   </div>
                 </div>
@@ -403,14 +434,14 @@
                 <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 text-[10px] font-bold">شهادة معتمدة</span>
               </div>
 
-              <h5 class="text-xs font-bold text-[#012383] mt-1">«تمارين واضحة ونتائج مباشرة في تصحيح حرف الراء»</h5>
+              <h5 class="text-xs font-bold text-[#012383] mt-1">«تمارين واضحة ونتائج مباشرة في تصحيح مخارج الحروف سريرياً»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                الدورة ممتازة من حيث الترتيب المنهجي. الفيديوهات قصيرة ومركزة، والملاحظات التي تلقيتها على مهمتي الصوتية ساعدتني كثيراً في تصحيح وضع اللسان مع طفلتي.
+                الكورس ممتاز من حيث الترتيب المنهجي. الفيديوهات مركزة، وملاحظات المحاضر على تحليلي الصوتي ساعدتني كثيراً في فهم مخارج الحروف سريرياً.
               </p>
             </div>
 
             <div class="mt-4 pt-3 border-t border-[#DEE8F7] flex items-center justify-between text-xs">
-              <span class="text-[11px] text-emerald-600 font-bold">أتمت ٩٥٪ من متطلبات الدورة</span>
+              <span class="text-[11px] text-emerald-600 font-bold">أتم ٩٥٪ من متطلبات الكورس</span>
               <button type="button" class="helpful-btn flex items-center gap-1.5 text-[#475569] hover:text-[#0B2A8F] font-semibold cursor-pointer">
                 <span>👍</span>
                 <span class="helpful-count">24</span>
@@ -439,14 +470,14 @@
                 <span class="px-2 py-0.5 rounded bg-[#EAF1FB] text-[#0B2A8F] text-[10px] font-bold">أساسيات التخاطب</span>
               </div>
 
-              <h5 class="text-xs font-bold text-[#012383] mt-1">«أفضل استثمار في مسيرتي كأخصائي مبتدئ»</h5>
+              <h5 class="text-xs font-bold text-[#012383] mt-1">«أفضل استثمار في مسيرتي كطالب وباحث في علوم التخاطب»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                استفدت كثيراً من النماذج التطبيقية واستمارة الملاحظة السريرية المرفقة في المرفقات. أنصح كل من يعمل في مراكز الرعاية بهذه المنصة.
+                استفدت كثيراً من النماذج التطبيقية واستمارة الملاحظة السريرية المرفقة بتوجيه المحاضرين. أنصح كل دارس في علوم التخاطب بهذه المنصة.
               </p>
             </div>
 
             <div class="mt-4 pt-3 border-t border-[#DEE8F7] flex items-center justify-between text-xs">
-              <span class="text-[11px] text-emerald-600 font-bold">أتم الدورة بدرجة امتياز</span>
+              <span class="text-[11px] text-emerald-600 font-bold">أتم الكورس بدرجة امتياز</span>
               <button type="button" class="helpful-btn flex items-center gap-1.5 text-[#475569] hover:text-[#0B2A8F] font-semibold cursor-pointer">
                 <span>👍</span>
                 <span class="helpful-count">18</span>
@@ -463,7 +494,7 @@
                     ف
                   </div>
                   <div>
-                    <h4 class="text-sm font-bold text-[#012383]">فاطمة الدوسري</h4>
+                    <h4 class="text-sm font-bold text-[#012383]">فهد الدوسري</h4>
                     <span class="text-[11px] text-[#475569]">منذ شهر</span>
                   </div>
                 </div>
@@ -472,17 +503,17 @@
 
               <div class="flex flex-wrap gap-1.5 items-center">
                 <span class="px-2 py-0.5 rounded bg-[#EEF7F3] text-emerald-700 text-[10px] font-bold">طالب موثق</span>
-                <span class="px-2 py-0.5 rounded bg-[#EAF1FB] text-[#0B2A8F] text-[10px] font-bold">تدريب الوالدين المنزلي</span>
+                <span class="px-2 py-0.5 rounded bg-[#EAF1FB] text-[#0B2A8F] text-[10px] font-bold">تدريب التخاطب السريري</span>
               </div>
 
-              <h5 class="text-xs font-bold text-[#012383] mt-1">«ساعدني على فهم كيف أتحدث مع ابني يومياً»</h5>
+              <h5 class="text-xs font-bold text-[#012383] mt-1">«منهجية علمية واضحة في تصحيح اللدغات الصوتية»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                لم أكن أعرف أخطائي في تصحيح كلام ابني. الدورة علمتني أسلوب المحاكاة والتكرار غير المباشر، وأصبح ابني الآن يشارك في الحديث دون خوف أو تردد.
+                الكورس قدّم تدريباً دقيقاً على تقنيات المحاكاة وتعديل مخارج الأصوات. التقييم المباشر للمهام من المحاضر عزز مهاراتي التطبيقية بشكل ملحوظ.
               </p>
             </div>
 
             <div class="mt-4 pt-3 border-t border-[#DEE8F7] flex items-center justify-between text-xs">
-              <span class="text-[11px] text-blue-600 font-bold">ولية أمر - نتائج ممتازة</span>
+              <span class="text-[11px] text-blue-600 font-bold">طالب معتمد - نتائج ممتازة</span>
               <button type="button" class="helpful-btn flex items-center gap-1.5 text-[#475569] hover:text-[#0B2A8F] font-semibold cursor-pointer">
                 <span>👍</span>
                 <span class="helpful-count">31</span>
@@ -513,7 +544,7 @@
 
               <h5 class="text-xs font-bold text-[#012383] mt-1">«تمارين التنفس والتحكم بالإيقاع أحدثت فارقاً»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                المحتوى عميق والأسلوب مبسط جداً. تمنيت لو كان هناك جلسة فيديو حية واحدة أسبوعياً ولكن التقييم الكتابي كان ممتازاً ومفصلاً.
+                المحتوى عميق والأسلوب مبسط جداً. تقييم المحاضر الكتابي للمهام السريرية كان ممتازاً ومفصلاً وساعدني على فهم آليات التحكم بالطلاقة.
               </p>
             </div>
 
@@ -535,7 +566,7 @@
                     ن
                   </div>
                   <div>
-                    <h4 class="text-sm font-bold text-[#012383]">نورة القاسم</h4>
+                    <h4 class="text-sm font-bold text-[#012383]">نايف القاسم</h4>
                     <span class="text-[11px] text-[#475569]">منذ ٥ أسابيع</span>
                   </div>
                 </div>
@@ -547,9 +578,9 @@
                 <span class="px-2 py-0.5 rounded bg-[#EAF1FB] text-[#0B2A8F] text-[10px] font-bold">تطبيقات مخارج الحروف</span>
               </div>
 
-              <h5 class="text-xs font-bold text-[#012383] mt-1">«سهولة التطبيق مع الأطفال داخل الحصة»</h5>
+              <h5 class="text-xs font-bold text-[#012383] mt-1">«تطبيقات علمية دقيقة في الفحص السريري للنطق»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                معلمة روضة وكنت أحتاج أدوات علمية للتعامل مع الأطفال ذوي النطق غير الواضح. الأنشطة والألعاب التفاعلية المقترحة ممتعة وفعالة للغاية.
+                طالب دراسات عليا وكنت أحتاج أدوات علمية للتعامل مع اضطرابات مخارج الحروف سريرياً. الأنشطة والتدريبات التفاعلية مع المحاضر ممتعة وعميقة للغاية.
               </p>
             </div>
 
@@ -563,7 +594,7 @@
           </article>
 
           <!-- Card 6 -->
-          <article class="review-card bg-white border border-[#DEE8F7] rounded-[20px] p-6 shadow-xs flex flex-col justify-between hover:shadow-card hover:-translate-y-1 transition-all" data-category="parent" data-rating="5" data-cert="true" data-helpful="28">
+          <article class="review-card bg-white border border-[#DEE8F7] rounded-[20px] p-6 shadow-xs flex flex-col justify-between hover:shadow-card hover:-translate-y-1 transition-all" data-category="speech" data-rating="5" data-cert="true" data-helpful="28">
             <div class="flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
@@ -571,7 +602,7 @@
                     ي
                   </div>
                   <div>
-                    <h4 class="text-sm font-bold text-[#012383]">ياسمين النجار</h4>
+                    <h4 class="text-sm font-bold text-[#012383]">يوسف النجار</h4>
                     <span class="text-[11px] text-[#475569]">منذ ٦ أسابيع</span>
                   </div>
                 </div>
@@ -583,14 +614,14 @@
                 <span class="px-2 py-0.5 rounded bg-[#EAF1FB] text-[#0B2A8F] text-[10px] font-bold">استراتيجيات تنمية اللغة</span>
               </div>
 
-              <h5 class="text-xs font-bold text-[#012383] mt-1">«تجاوز ابني مرحلة الكلمة المفردة إلى جمل كاملة»</h5>
+              <h5 class="text-xs font-bold text-[#012383] mt-1">«تدرج منهجي متقن من التقييم حتى التدخل العلاجي»</h5>
               <p class="text-xs text-[#475569] font-medium leading-relaxed">
-                الشكر موصول لفريق الأمين والمدربين على الدعم المتواصل. المتابعة بعد كل مهمة جعلتني أشعر بأن هناك أخصائياً يرافقني خطوة بخطوة في بيتي.
+                الشكر موصول لمنصة الأمين والمحاضرين على الدعم المتواصل. الملاحظات الدورية بعد كل مهمة جعلتني أمتلك ثقة تامة في تطبيق خطط التخاطب السريرية.
               </p>
             </div>
 
             <div class="mt-4 pt-3 border-t border-[#DEE8F7] flex items-center justify-between text-xs">
-              <span class="text-[11px] text-emerald-600 font-bold">أتمت الدورة بنجاح</span>
+              <span class="text-[11px] text-emerald-600 font-bold">أتم الكورس بنجاح</span>
               <button type="button" class="helpful-btn flex items-center gap-1.5 text-[#475569] hover:text-[#0B2A8F] font-semibold cursor-pointer">
                 <span>👍</span>
                 <span class="helpful-count">28</span>
@@ -705,20 +736,264 @@
       </div>
 
       <!-- ============================================== -->
-      <!-- FOOTER                                         -->
+      <!-- GLOBAL FOOTER (Deep Navy Premium Edition)      -->
       <!-- ============================================== -->
-      <footer class="w-full bg-[#FAFCFF] border-t border-[#D7E3F5] px-6 lg:px-[48px] py-8 text-center text-xs text-[#475569]">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="flex items-center gap-2">
-            <span class="font-bold text-[#012383]" data-i18n="brand.name">منصة الأمين</span>
-            <span>© ٢٠٢٦ • جميع الحقوق محفوظة</span>
+      <footer class="w-full bg-[#031338] text-white relative overflow-hidden border-t border-[#122A63]">
+        
+        <!-- Ambient Decorative Glows -->
+        <div class="absolute -top-32 start-10 size-[380px] rounded-full bg-blue-600/10 blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute -bottom-24 end-12 size-[320px] rounded-full bg-indigo-500/10 blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-14 lg:pt-16 pb-8 flex flex-col gap-12">
+          
+          <!-- Top Row: Main 4 Columns -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+            
+            <!-- Column 1: Brand & Identity (Lg: 4 cols) -->
+            <div class="lg:col-span-4 flex flex-col gap-5">
+              
+              <!-- Brand Logo with soft badge -->
+              <a href="../#home" class="flex gap-3 items-center group w-fit">
+                <div class="size-11 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-md shadow-blue-950/50 group-hover:scale-105 transition-transform">
+                  <img src="/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain" />
+                </div>
+                <div class="flex flex-col text-start">
+                  <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-2xl text-white tracking-tight leading-tight">
+                    منصة الأمين
+                  </span>
+                  <span class="text-[11px] text-blue-200/80 font-bold font-['Cairo']">
+                    لتأهيل التخاطب والنطق
+                  </span>
+                </div>
+              </a>
+
+              <!-- Mission Statement -->
+              <p class="text-xs sm:text-[13px] leading-relaxed text-blue-100/70 font-medium max-w-sm">
+                المنصة العربية المتخصصة في تدريب وتأهيل مهارات النطق والتخاطب، نجمع بين الأسس العلمية المعتمدة والتطبيقات السريرية العملية بإشراف نخبة من كبار أخصائيي التخاطب.
+              </p>
+
+              <!-- Trust Tags -->
+              <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-bold text-blue-200">
+                <span class="px-2.5 py-1 rounded-lg bg-blue-950/70 border border-blue-800/40 flex items-center gap-1.5">
+                  <span class="size-1.5 rounded-full bg-emerald-400"></span>
+                  شهادات معتمدة برمز QR
+                </span>
+                <span class="px-2.5 py-1 rounded-lg bg-blue-950/70 border border-blue-800/40 flex items-center gap-1.5">
+                  <span class="size-1.5 rounded-full bg-blue-400"></span>
+                  تدريب تطبيقي بالفيديو
+                </span>
+              </div>
+
+              <!-- Social Media Links -->
+              <div class="flex items-center gap-2.5 pt-2">
+                <!-- WhatsApp -->
+                <a
+                  href="https://wa.me/966501234567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="واتساب"
+                  class="size-9 rounded-xl bg-blue-950/80 border border-blue-800/50 hover:bg-[#10B77F] hover:border-[#10B77F] text-blue-200 hover:text-white flex items-center justify-center transition-all shadow-xs group cursor-pointer"
+                >
+                  <svg class="size-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.07-.999-.074-.755-.298-1.52-.752-2.227-1.458-.894-.893-1.425-1.923-1.688-2.338-.263-.414-.029-.636.143-.808.156-.156.342-.405.513-.607.172-.202.229-.344.343-.573.114-.229.057-.428-.029-.6-.086-.172-.771-1.859-1.057-2.545-.278-.669-.561-.579-.771-.59-.2-.01-.429-.012-.657-.012-.229 0-.6.086-.914.428-.314.343-1.2 1.171-1.2 2.858 0 1.687 1.229 3.315 1.4 3.543.172.229 2.417 3.691 5.857 5.176 2.851 1.231 3.432.986 4.05.928.618-.057 1.99-.813 2.275-1.599.285-.785.285-1.457.2-1.599-.085-.143-.314-.229-.657-.401z"/>
+                  </svg>
+                </a>
+                <!-- X / Twitter -->
+                <a
+                  href="#"
+                  aria-label="منصة إكس"
+                  class="size-9 rounded-xl bg-blue-950/80 border border-blue-800/50 hover:bg-[#0B2A8F] hover:border-blue-500 text-blue-200 hover:text-white flex items-center justify-center transition-all shadow-xs group cursor-pointer"
+                >
+                  <svg class="size-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a
+                  href="#"
+                  aria-label="لينكد إن"
+                  class="size-9 rounded-xl bg-blue-950/80 border border-blue-800/50 hover:bg-[#0077B5] hover:border-[#0077B5] text-blue-200 hover:text-white flex items-center justify-center transition-all shadow-xs group cursor-pointer"
+                >
+                  <svg class="size-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+                <!-- YouTube -->
+                <a
+                  href="#"
+                  aria-label="يوتيوب"
+                  class="size-9 rounded-xl bg-blue-950/80 border border-blue-800/50 hover:bg-[#FF0000] hover:border-[#FF0000] text-blue-200 hover:text-white flex items-center justify-center transition-all shadow-xs group cursor-pointer"
+                >
+                  <svg class="size-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Column 2: مسارات التخاطب المتخصصة (Lg: 3 cols) -->
+            <div class="lg:col-span-3 flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-4 rounded-full bg-[#10B77F]"></span>
+                <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
+                  مسارات التخاطب المتخصصة
+                </h4>
+              </div>
+              <ul class="flex flex-col gap-2.5 text-xs font-semibold text-blue-200/75">
+                <li>
+                  <a href="./courses.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    تأهيل وتنمية اللغة والتواصل
+                  </a>
+                </li>
+                <li>
+                  <a href="./courses.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    علاج اضطرابات مخارج الحروف
+                  </a>
+                </li>
+                <li>
+                  <a href="./courses.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    برامج علاج التلعثم والطلاقة
+                  </a>
+                </li>
+                <li>
+                  <a href="./courses.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    التدخل المبكر والتأهيل السلوكي
+                  </a>
+                </li>
+                <li>
+                  <a href="./courses.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    الممارسة السريرية للطلاب
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: الاعتماد والخدمات (Lg: 2 cols) -->
+            <div class="lg:col-span-2 flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-4 rounded-full bg-blue-400"></span>
+                <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
+                  الخدمات والاعتماد
+                </h4>
+              </div>
+              <ul class="flex flex-col gap-2.5 text-xs font-semibold text-blue-200/75">
+                <li>
+                  <a href="./certificate.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    الشهادات المعتمدة و QR
+                  </a>
+                </li>
+                <li>
+                  <a href="./dashboard.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    لوحة متابعة الطالب
+                  </a>
+                </li>
+                <li>
+                  <a href="./my-grades.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    سجل الدرجات والتقارير
+                  </a>
+                </li>
+                <li>
+                  <a href="./lesson.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    دروس وتطبيقات تجريبية
+                  </a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transition-all inline-flex items-center gap-1.5">
+                    <span class="text-blue-400">›</span>
+                    طلب استشارة متخصصة
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: قنوات الدعم المباشرة (Lg: 3 cols) -->
+            <div class="lg:col-span-3 flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-4 rounded-full bg-amber-400"></span>
+                <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
+                  الدعم الفني والأكاديمي
+                </h4>
+              </div>
+
+              <!-- Status Badge -->
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-950/80 border border-blue-800/50 text-[11px] font-bold text-emerald-300 w-fit">
+                <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>فريق الدعم متاح وجاهز لمساعدتك</span>
+              </div>
+
+              <!-- Channels -->
+              <div class="flex flex-col gap-2.5 text-xs text-blue-100/70">
+                <div class="flex items-center gap-2.5">
+                  <div class="size-7 rounded-lg bg-blue-900/40 border border-blue-800/40 flex items-center justify-center text-blue-300 shrink-0">
+                    ✉️
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-blue-300 font-bold">البريد الأكاديمي</span>
+                    <a href="mailto:support@alameen-center.com" class="font-medium hover:text-white transition-colors">support@alameen-center.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <div class="size-7 rounded-lg bg-blue-900/40 border border-blue-800/40 flex items-center justify-center text-blue-300 shrink-0">
+                    📞
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-blue-300 font-bold">واتساب المباشر</span>
+                    <span class="font-medium text-white dir-ltr text-start">+966 50 123 4567</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <div class="size-7 rounded-lg bg-blue-900/40 border border-blue-800/40 flex items-center justify-center text-blue-300 shrink-0">
+                    🕒
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-blue-300 font-bold">أوقات العمل</span>
+                    <span class="font-medium text-blue-100/80">السبت - الخميس (٩:٠٠ ص - ٩:٠٠ م)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
-          <div class="flex items-center gap-6">
-            <a href="/pages/courses.html" class="hover:text-[#012383] transition-colors" data-i18n="landing.navCourses">الدورات</a>
-            <a href="/pages/reviews.html" class="hover:text-[#012383] transition-colors" data-i18n="landing.navTestimonials">آراء الطلاب</a>
-            <a href="/pages/contact.html" class="hover:text-[#012383] transition-colors" data-i18n="landing.navContact">تواصل معنا</a>
+
+          <!-- Bottom Row: Sub-footer Divider & Legal Links -->
+          <div class="pt-8 border-t border-blue-900/40 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-blue-200/60 font-medium">
+            
+            <div class="flex items-center gap-2 text-center md:text-start">
+              <span>© ٢٠٢٦ منصة الأمين لتأهيل التخاطب والنطق. جميع الحقوق محفوظة.</span>
+            </div>
+
+            <!-- Security & Legal -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] sm:text-xs">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-950/60 border border-blue-800/30 text-blue-200/80">
+                <svg class="size-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
+                </svg>
+                مشفر بمعيار 256-bit SSL
+              </span>
+              <a href="#" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+              <span>•</span>
+              <a href="#" class="hover:text-white transition-colors">الشروط والأحكام</a>
+              <span>•</span>
+              <a href="#" class="hover:text-white transition-colors">سياسة الاعتماد الأكاديمي</a>
+            </div>
+
           </div>
+
         </div>
+
       </footer>
 
     </div>
@@ -841,5 +1116,6 @@
         });
       });
     </script>
+    <script type="module" src="/src/js/i18n.js"></script>
   </body>
 </html>
