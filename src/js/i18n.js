@@ -70,13 +70,18 @@ class I18nEngine {
       labelEl.textContent = lang === 'ar' ? 'العربية' : 'English';
     }
 
-    // 5. Update active classes in dropdown
+    // 5. Update active classes and checkmarks in dropdown
     document.querySelectorAll('[data-set-lang]').forEach((btn) => {
       const btnLang = btn.getAttribute('data-set-lang');
+      const checkIcon = btn.querySelector('.lang-check-icon');
       if (btnLang === lang) {
         btn.classList.add('bg-[#EAF1FB]', 'font-bold', 'text-[#012383]');
+        btn.classList.remove('text-[#475569]');
+        if (checkIcon) checkIcon.classList.remove('opacity-0');
       } else {
         btn.classList.remove('bg-[#EAF1FB]', 'font-bold', 'text-[#012383]');
+        btn.classList.add('text-[#475569]');
+        if (checkIcon) checkIcon.classList.add('opacity-0');
       }
     });
 
@@ -98,14 +103,20 @@ class I18nEngine {
       e.stopPropagation();
       this.isDropdownOpen = !this.isDropdownOpen;
       dropdown.classList.toggle('hidden', !this.isDropdownOpen);
+      dropdown.classList.toggle('flex', this.isDropdownOpen);
       toggleBtn.setAttribute('aria-expanded', String(this.isDropdownOpen));
+      const caret = toggleBtn.querySelector('.lang-caret');
+      if (caret) caret.style.transform = this.isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     });
 
     document.addEventListener('click', (e) => {
       if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
         this.isDropdownOpen = false;
         dropdown.classList.add('hidden');
+        dropdown.classList.remove('flex');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        const caret = toggleBtn.querySelector('.lang-caret');
+        if (caret) caret.style.transform = 'rotate(0deg)';
       }
     });
   }

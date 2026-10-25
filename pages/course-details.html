@@ -157,23 +157,43 @@
             <div class="relative" id="lang-switcher">
               <button
                 type="button"
-                id="lang-btn"
+                id="lang-toggle-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
                 class="flex items-center gap-[8px] h-[38px] px-[14px] rounded-full border border-[#DEE8F7] bg-[#EAF1FB]/50 text-[#012383] font-['Cairo'] font-semibold text-[13px] hover:bg-[#EAF1FB] transition-all cursor-pointer"
               >
                 <svg class="size-[16px] text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
-                <span id="current-lang-text" data-i18n="header.currentLang">العربية</span>
-                <svg class="size-[12px] text-[#475569]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span id="current-lang-label" data-i18n="header.currentLang">العربية</span>
+                <svg class="size-[12px] text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
-                id="lang-menu"
-                class="hidden absolute top-[44px] start-0 bg-white border border-[#DEE8F7] rounded-[12px] shadow-lg py-1 w-[120px] z-50 overflow-hidden"
+                id="lang-dropdown"
+                class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
               >
-                <button type="button" class="lang-opt w-full text-start px-4 py-2 text-[13px] text-[#012383] hover:bg-[#EAF1FB] font-medium" data-lang="ar">العربية</button>
-                <button type="button" class="lang-opt w-full text-start px-4 py-2 text-[13px] text-[#012383] hover:bg-[#EAF1FB] font-medium" data-lang="en">English</button>
+                <button
+                  type="button"
+                  data-set-lang="ar"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
+                >
+                  <span>العربية</span>
+                  <svg class="size-4 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  data-set-lang="en"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
+                >
+                  <span>English</span>
+                  <svg class="size-4 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
               </div>
             </div>
 

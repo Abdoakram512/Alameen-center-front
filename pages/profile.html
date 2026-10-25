@@ -177,30 +177,34 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
                 </svg>
                 <span id="current-lang-label">العربية</span>
-                <svg class="w-3 h-3 text-[#475569] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-3.5 h-3.5 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
 
               <div
                 id="lang-dropdown"
-                class="hidden absolute start-0 top-full mt-2 w-36 rounded-xl bg-white shadow-xl border border-[#dee8f7] py-1.5 z-50 transition-all"
+                class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1"
               >
                 <button
                   type="button"
                   data-set-lang="ar"
-                  class="w-full flex items-center justify-between px-3.5 py-2 text-xs text-[#012383] hover:bg-[#eaf1fb] font-semibold cursor-pointer text-start"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
                 >
                   <span>العربية</span>
-                  <span class="text-[10px] text-[#0b2a8f] font-bold px-1.5 py-0.5 rounded bg-blue-100">RTL</span>
+                  <svg class="size-4 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
                 </button>
                 <button
                   type="button"
                   data-set-lang="en"
-                  class="w-full flex items-center justify-between px-3.5 py-2 text-xs text-[#475569] hover:bg-[#eaf1fb] font-semibold cursor-pointer text-start"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors"
                 >
                   <span>English</span>
-                  <span class="text-[10px] text-slate-500 font-bold px-1.5 py-0.5 rounded bg-slate-100">LTR</span>
+                  <svg class="size-4 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
                 </button>
               </div>
             </div>
