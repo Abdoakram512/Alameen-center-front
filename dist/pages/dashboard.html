@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الأمين | لوحة الطالب</title>
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Stylesheet with Tailwind and Design Tokens -->
+    <script type="module" crossorigin src="/Alameen-center-front/assets/i18n-iV168XFs.js"></script>
+    <link rel="stylesheet" crossorigin href="/Alameen-center-front/assets/i18n-BpD6fLQ5.css">
+  </head>
+  <body class="bg-[#fafcff] min-h-screen text-[#475569] font-['Cairo'] antialiased">
+    <!-- Main 1440px Canvas Container (Node 1155:17662) -->
+    <div class="max-w-[1440px] mx-auto min-h-screen flex flex-row bg-[#fafcff]" id="app-canvas" data-node-id="1155:17662">
+      
+      <!-- ============================================== -->
+      <!-- 1. PRIMARY NAVIGATION SIDEBAR (248px Width)     -->
+      <!-- Positioned on the RIGHT in RTL (1st child)      -->
+      <!-- ============================================== -->
+      <aside class="w-[248px] bg-white border-l border-[#dee8f7] flex flex-col gap-[28px] pb-[24px] pt-[22px] px-[20px] shrink-0 min-h-screen z-10" data-node-id="1155:17859">
+        
+        <!-- Al-Ameen Brand Identity (Real Figma Logo) (Node 1155:17860) -->
+        <a href="../index.html" class="flex gap-[8px] h-[62px] items-center justify-end w-full cursor-pointer" data-node-id="1155:17860">
+          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[25px] leading-[1.45] text-[#012383] whitespace-nowrap" data-i18n="brand.name" data-node-id="1155:17861">
+            منصة الأمين
+          </span>
+          <div class="size-[54px] shrink-0 relative" data-node-id="1155:17862">
+            <img src="/Alameen-center-front/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain pointer-events-none" />
+          </div>
+        </a>
+
+        <!-- Student Navigation Group (Node 1155:17863) -->
+        <div class="flex flex-col gap-[7px] items-start w-full" data-node-id="1155:17863">
+          <p class="font-['Cairo'] font-medium text-[12px] leading-[1.8] text-[#475569] text-right w-full px-2" data-i18n="nav.section" data-node-id="1155:17864">
+            التعلّم الخاص بك
+          </p>
+
+          <!-- لوحة الطالب - ACTIVE (Node 1155:17865) -->
+          <a
+            href="./dashboard.html"
+            class="bg-[#eaf1fb] flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full cursor-pointer"
+            data-node-id="1155:17865"
+          >
+            <span class="font-['Cairo'] font-bold text-[14px] leading-[1.8] text-[#0b2a8f] text-right flex-1" data-i18n="nav.dashboard" data-node-id="1155:17866">لوحة الطالب</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:17867">
+              <img src="/Alameen-center-front/assets/images/icon-dashboard.svg" alt="" class="size-full" />
+            </div>
+          </a>
+
+          <!-- دوراتي (Node 1155:17875) -->
+          <a
+            href="./course-details.html"
+            class="flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full text-[#475569] hover:bg-[#eaf1fb]/50 hover:text-[#012383] transition-colors cursor-pointer"
+            data-node-id="1155:17875"
+          >
+            <span class="font-['Cairo'] font-semibold text-[14px] leading-[1.8] text-right flex-1" data-i18n="nav.courses" data-node-id="1155:17876">دوراتي</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:19344">
+              <img src="/Alameen-center-front/assets/images/icon-courses.svg" alt="" class="size-full" />
+            </div>
+          </a>
+
+          <!-- المهام (Node 1155:17878) -->
+          <a
+            href="./assignment.html"
+            class="flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full text-[#475569] hover:bg-[#eaf1fb]/50 hover:text-[#012383] transition-colors cursor-pointer"
+            data-node-id="1155:17878"
+          >
+            <span class="font-['Cairo'] font-semibold text-[14px] leading-[1.8] text-right flex-1" data-i18n="nav.assignments" data-node-id="1155:17879">المهام</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:19347">
+              <img src="/Alameen-center-front/assets/images/icon-assignments.svg" alt="" class="size-full" />
+            </div>
+          </a>
+
+          <!-- درجاتي (Node 1155:17881) -->
+          <a
+            href="./grades.html"
+            class="flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full text-[#475569] hover:bg-[#eaf1fb]/50 hover:text-[#012383] transition-colors cursor-pointer"
+            data-node-id="1155:17881"
+          >
+            <span class="font-['Cairo'] font-semibold text-[14px] leading-[1.8] text-right flex-1" data-i18n="nav.grades" data-node-id="1155:17882">درجاتي</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:19350">
+              <img src="/Alameen-center-front/assets/images/icon-grades.svg" alt="" class="size-full" />
+            </div>
+          </a>
+
+          <!-- شهاداتي (Node 1155:17884) -->
+          <a
+            href="./certificates.html"
+            class="flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full text-[#475569] hover:bg-[#eaf1fb]/50 hover:text-[#012383] transition-colors cursor-pointer"
+            data-node-id="1155:17884"
+          >
+            <span class="font-['Cairo'] font-semibold text-[14px] leading-[1.8] text-right flex-1" data-i18n="nav.certificates" data-node-id="1155:17885">شهاداتي</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:19353">
+              <img src="/Alameen-center-front/assets/images/icon-certificates.svg" alt="" class="size-full" />
+            </div>
+          </a>
+
+          <!-- حسابي (Node 1155:17887) -->
+          <a
+            href="./profile.html"
+            class="flex gap-[12px] h-[50px] items-center justify-between px-[14px] rounded-[10px] w-full text-[#475569] hover:bg-[#eaf1fb]/50 hover:text-[#012383] transition-colors cursor-pointer"
+            data-node-id="1155:17887"
+          >
+            <span class="font-['Cairo'] font-semibold text-[14px] leading-[1.8] text-right flex-1" data-i18n="nav.profile" data-node-id="1155:17888">حسابي</span>
+            <div class="size-[20px] shrink-0 relative" data-node-id="1155:19356">
+              <img src="/Alameen-center-front/assets/images/icon-profile.svg" alt="" class="size-full" />
+            </div>
+          </a>
+        </div>
+
+        <!-- Learning Reminder Card (Node 1155:19203) -->
+        <div class="bg-[#FAFCFF] border border-[#DEE8F7] flex flex-col gap-[10px] items-end p-[18px] rounded-[16px] w-full text-right overflow-clip shrink-0" data-node-id="1155:19203">
+          <div class="size-[20px] shrink-0 relative" data-node-id="1155:19617">
+            <img src="/Alameen-center-front/assets/images/icon-bookmark.svg" alt="" class="size-full" />
+          </div>
+          <p class="font-['Cairo'] font-bold text-[#012383] text-[15px] leading-[1.8] text-right w-full" data-i18n="nav.reminderTitle" data-node-id="1155:19205">
+            خطوة صغيرة، أثر مستمر
+          </p>
+          <p class="font-['Cairo'] font-medium text-[#475569] text-[12px] leading-[1.8] text-right w-full" data-i18n="nav.reminderDesc" data-node-id="1155:19206">
+            تقدّم المشاهدة والمهام محفوظان في مساحة تعلّمك.
+          </p>
+        </div>
+
+        <!-- Sign out (Node 1155:17894) -->
+        <a
+          href="./login.html"
+          class="flex gap-[12px] h-[46px] items-center justify-between p-[12px] rounded-[10px] w-full text-[#f50004] hover:bg-red-50 cursor-pointer transition-colors mt-auto"
+          data-node-id="1155:17894"
+        >
+          <span class="font-['Cairo'] font-medium text-[13px] leading-[1.8] text-[#f50004] text-right flex-1" data-i18n="nav.signout" data-node-id="1155:17895">تسجيل الخروج</span>
+          <div class="size-[18px] shrink-0 relative" data-node-id="1155:19362">
+            <img src="/Alameen-center-front/assets/images/icon-logout.svg" alt="" class="size-full" />
+          </div>
+        </a>
+
+      </aside>
+
+      <!-- ============================================== -->
+      <!-- 2. LEARNING WORKSPACE (1192px Area)            -->
+      <!-- Positioned on the LEFT in RTL (2nd child)      -->
+      <!-- ============================================== -->
+      <main class="flex-1 min-w-0 flex flex-col min-h-screen bg-[#fafcff]" data-node-id="1155:17663">
+        
+        <!-- Top Account Bar (Node 1155:17664 - Height: 80px) -->
+        <header class="h-[80px] bg-[#fafcff] border-b border-[#dee8f7] px-[40px] flex items-center justify-between shrink-0" data-node-id="1155:17664">
+          
+          <!-- Search Courses Input (On the RIGHT in RTL - 1st child) (Node 1155:17674) -->
+          <div class="w-[330px] h-[42px] bg-[#fafcff] border border-[#dee8f7] rounded-[10px] px-[14px] flex items-center gap-[12px] focus-within:border-[#0b2a8f] focus-within:ring-1 focus-within:ring-[#0b2a8f] transition-all" data-node-id="1155:17674">
+            <input
+              type="text"
+              class="flex-1 bg-transparent text-[13px] text-[#012383] placeholder-[#475569] outline-none font-medium text-right font-['Cairo'] leading-[1.8]"
+              placeholder="ابحثي في دوراتك ودروسك"
+              data-i18n-placeholder="header.searchPlaceholder"
+              data-node-id="1155:17675"
+            />
+            <div class="size-[19px] shrink-0 relative" data-node-id="1155:17676">
+              <img src="/Alameen-center-front/assets/images/icon-search.svg" alt="" class="size-full" />
+            </div>
+          </div>
+
+          <!-- Student Account & Language Switcher Group (On the LEFT in RTL - 2nd child) (Node 1155:17665) -->
+          <div class="flex items-center gap-[12px]" data-node-id="1155:17665">
+            
+            <!-- Language Switcher Pill Dropdown -->
+            <div class="relative me-2" id="lang-switcher">
+              <button
+                type="button"
+                id="lang-toggle-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#eaf1fb] text-[#012383] hover:bg-[#dee8f7] transition-all text-xs font-bold cursor-pointer border border-[#dee8f7]/60"
+              >
+                <svg class="w-3.5 h-3.5 text-[#0b2a8f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
+                </svg>
+                <span id="current-lang-label">العربية</span>
+                <svg class="w-3.5 h-3.5 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div
+                id="lang-dropdown"
+                class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#dee8f7] p-1.5 z-50 transition-all flex-col gap-1"
+              >
+                <button
+                  type="button"
+                  data-set-lang="ar"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#eaf1fb] rounded-xl font-bold cursor-pointer text-start transition-colors"
+                >
+                  <span>العربية</span>
+                  <svg class="size-4 text-[#0b2a8f] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  data-set-lang="en"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#eaf1fb] rounded-xl font-bold cursor-pointer text-start transition-colors"
+                >
+                  <span>English</span>
+                  <svg class="size-4 text-[#0b2a8f] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="h-5 w-px bg-[#dee8f7]"></div>
+
+            <!-- Notifications Bell (Node 1155:17672) -->
+            <button
+              type="button"
+              class="relative size-[42px] flex items-center justify-center rounded-full hover:bg-[#eaf1fb] transition-colors cursor-pointer text-[#475569]"
+              data-i18n-aria="header.notifications"
+              aria-label="الإشعارات"
+              data-node-id="1155:17672"
+            >
+              <div class="size-[20px] shrink-0 relative" data-node-id="1155:19338">
+                <img src="/Alameen-center-front/assets/images/icon-bell.svg" alt="" class="size-full" />
+              </div>
+            </button>
+
+            <!-- Student Profile Summary -->
+            <div class="flex items-center gap-[12px] cursor-pointer">
+              <!-- Caret Down (Node 1155:17666) -->
+              <div class="size-[16px] shrink-0 relative" data-node-id="1155:17666">
+                <img src="/Alameen-center-front/assets/images/icon-account-menu.svg" alt="" class="size-full" />
+              </div>
+              <!-- Student Name (Node 1155:17669) -->
+              <p class="font-['Cairo'] font-bold text-[14px] leading-[1.8] text-[#012383] text-right whitespace-nowrap" data-i18n="header.studentName" data-node-id="1155:17669">
+                أحمد إبراهيم
+              </p>
+              <!-- Student Initials (Node 1155:17670) -->
+              <div class="size-[38px] rounded-full bg-[#eaf1fb] flex items-center justify-center shrink-0" data-node-id="1155:17670">
+                <span class="font-['Cairo'] font-bold text-[15px] leading-[1.8] text-[#0b2a8f]" data-i18n="header.studentInitial" data-node-id="1155:17671">
+                  أ
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </header>
+
+        <!-- Page Body Content (Node 1155:17680) -->
+        <div class="flex flex-col gap-[24px] pb-[40px] pt-[24px] lg:pt-[30px] px-4 sm:px-6 lg:px-[40px] w-full" data-node-id="1155:17680">
+          
+          <!-- Page Introduction (Node 1155:17681) -->
+          <div class="flex flex-col gap-[2px] items-start text-start w-full" data-node-id="1155:17681">
+            <p class="font-['Cairo'] font-semibold text-[12px] leading-[1.8] text-[#0b2a8f] w-full" data-i18n="dashboard.breadcrumb" data-node-id="1155:17682">
+              مساحة التعلّم / لوحة الطالب
+            </p>
+            <h1 class="font-['Baloo_Bhaijaan_2'] font-bold text-[30px] sm:text-[34px] leading-[1.4] text-[#012383] w-full" data-i18n="dashboard.pageTitle" data-node-id="1155:17683">
+              أهلًا بعودتك، أحمد
+            </h1>
+            <p class="font-['Cairo'] font-medium text-[13px] sm:text-[14px] leading-[1.7] text-[#475569] w-full" data-i18n="dashboard.pageDesc" data-node-id="1155:17684">
+              كورساتك ومهامك في مكان واحد. تابع من حيث توقّفت، بخطوة واضحة.
+            </p>
+          </div>
+
+          <!-- ============================================== -->
+          <!-- Resume Learning Studio Split-Card (Node 1155:17685) -->
+          <!-- ============================================== -->
+          <div class="bg-white border border-[#dee8f7] rounded-[20px] p-[20px] lg:p-[24px] shadow-[0px_8px_30px_rgba(11,42,143,0.05)] hover:shadow-[0px_12px_36px_rgba(11,42,143,0.08)] transition-all flex flex-col lg:flex-row items-stretch gap-[24px] w-full relative overflow-hidden group" data-node-id="1155:17685">
+            
+            <!-- Video Preview Container (Right in RTL - 45% on desktop) (Node 1155:17686) -->
+            <div class="w-full lg:w-[380px] xl:w-[420px] h-[210px] sm:h-[240px] lg:h-auto rounded-[16px] overflow-hidden relative shrink-0 group/video cursor-pointer shadow-sm bg-slate-100" data-node-id="1155:17686">
+              <img src="/Alameen-center-front/assets/images/video-preview.png" alt="تدريبات الوعي الصوتي" class="size-full object-cover rounded-[16px] pointer-events-none group-hover/video:scale-105 transition-transform duration-300" />
+              
+              <!-- Center Play Button (Node 3105:210) -->
+              <a
+                href="./lesson.html"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[64px] rounded-full bg-white/95 border border-white shadow-[0px_8px_24px_rgba(1,35,131,0.18)] flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10"
+                data-node-id="3105:210"
+              >
+                <div class="size-[26px] relative shrink-0" data-node-id="3105:236">
+                  <img src="/Alameen-center-front/assets/images/icon-play-circle.svg" alt="تشغيل" class="size-full" />
+                </div>
+              </a>
+
+              <!-- Video Meta Badge: Duration (Node 3105:212) -->
+              <div class="absolute top-[14px] end-[14px] bg-[#012383]/85 backdrop-blur-md border border-white/20 rounded-full px-[12px] py-[5px] flex items-center gap-[6px] text-[12px] text-white whitespace-nowrap z-10 shadow-sm" data-node-id="3105:212">
+                <span class="font-['Cairo'] font-bold text-white" data-i18n="dashboard.lessonDuration" data-node-id="3105:213">٢٠:٠٠</span>
+                <span class="font-['Cairo'] font-medium text-white/80" data-i18n="dashboard.lessonDurationLabel" data-node-id="3105:214">مدة الدرس</span>
+              </div>
+            </div>
+
+            <!-- Content Column (Left in RTL - 55% on desktop) (Node 1155:17713) -->
+            <div class="flex-1 flex flex-col justify-between gap-[16px] text-start min-w-0" data-node-id="1155:17713">
+              
+              <!-- Eyebrow & Category Info -->
+              <div class="flex flex-col gap-[8px] items-start text-start w-full">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-[#eaf1fb] text-[#0b2a8f] text-[12px] font-bold font-['Cairo']" data-i18n="dashboard.resumeEyebrow" data-node-id="1155:17714">
+                    واصل تعلّمك • آخر موضع محفوظ
+                  </span>
+                  <span class="size-1.5 rounded-full bg-emerald-500"></span>
+                  <span class="text-[12px] text-[#475569] font-medium font-['Cairo']">قيد التقدم</span>
+                </div>
+
+                <h3 class="font-['Cairo'] font-bold text-[22px] sm:text-[24px] leading-[1.3] text-[#012383] text-start w-full mt-1" data-i18n="dashboard.resumeTitle" data-node-id="1155:17715">
+                  تدريبات الوعي الصوتي
+                </h3>
+
+                <p class="font-['Cairo'] font-medium text-[13px] sm:text-[14px] leading-[1.6] text-[#475569] text-start w-full" data-i18n="dashboard.resumeMeta" data-node-id="1155:17716">
+                  أساسيات التخاطب  /  المستوى الثاني  /  الدرس ٩
+                </p>
+              </div>
+
+              <!-- Progress Track & Labels (Node 3105:229) -->
+              <div class="flex flex-col gap-[8px] w-full mt-auto pt-2">
+                <div class="flex items-center justify-between text-[12px] w-full" data-node-id="3105:229">
+                  <span class="font-['Cairo'] font-bold text-[#0b2a8f]" data-i18n="dashboard.resumeTime" data-node-id="3105:233">٠٨:٠٠ مكتمل</span>
+                  <span class="font-['Cairo'] font-semibold text-[#475569]" data-i18n="dashboard.resumePercent" data-node-id="3105:234">٤٠٪ من الدرس</span>
+                </div>
+
+                <!-- Progress Track (Node 3105:230) -->
+                <div class="bg-[#dee8f7] h-[8px] rounded-full w-full overflow-hidden relative" data-node-id="3105:230">
+                  <div class="bg-gradient-to-r from-[#0b2a8f] to-[#012383] h-full rounded-full w-[40%]" data-node-id="3105:231"></div>
+                </div>
+              </div>
+
+              <!-- Actions Row (Node 3105:222) -->
+              <div class="flex items-center gap-[12px] pt-1 flex-wrap sm:flex-nowrap w-full" data-node-id="3105:222">
+                <a
+                  href="./lesson.html"
+                  class="bg-[#0b2a8f] hover:bg-[#012383] text-white h-[46px] px-[22px] rounded-[10px] flex items-center justify-center gap-[8px] shadow-sm hover:shadow transition-all cursor-pointer font-['Cairo'] font-bold text-[14px] leading-[1.5] flex-1 sm:flex-initial whitespace-nowrap"
+                  data-node-id="3105:223"
+                >
+                  <div class="size-[16px] shrink-0 relative" data-node-id="3105:239">
+                    <img src="/Alameen-center-front/assets/images/icon-play-small.svg" alt="" class="size-full" />
+                  </div>
+                  <span data-i18n="dashboard.continueWatching" data-node-id="3105:225">
+                    اكمل المشاهدة
+                  </span>
+                </a>
+
+                <a
+                  href="./course-details.html"
+                  class="bg-white border border-[#dee8f7] hover:bg-[#eaf1fb]/60 text-[#0b2a8f] h-[46px] px-[18px] rounded-[10px] flex items-center justify-center font-['Cairo'] font-bold text-[13px] transition-colors cursor-pointer whitespace-nowrap"
+                >
+                  تفاصيل المسار
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ============================================== -->
+          <!-- Enrolled Courses Grid (Node 1155:17721)        -->
+          <!-- ============================================== -->
+          <div class="flex flex-col gap-[18px] w-full">
+            
+            <!-- Section Heading (Node 1155:17721) -->
+            <div class="flex items-center justify-between w-full" data-node-id="1155:17721">
+              <h2 class="font-['Cairo'] font-bold text-[20px] sm:text-[22px] leading-[1.4] text-[#012383]" data-i18n="dashboard.enrolledHeading" data-node-id="1155:17723">
+                كورساتي المسجّلة
+              </h2>
+              <span class="font-['Cairo'] font-medium text-[13px] leading-[1.8] text-[#475569] bg-white border border-[#dee8f7] px-3 py-1 rounded-full text-xs shadow-xs" data-i18n="dashboard.enrolledCount" data-node-id="1155:17722">
+                ٣ كورسات في مسارك
+              </span>
+            </div>
+
+            <!-- 3 Course Cards Grid (Node 1155:17724) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px] lg:gap-[20px] w-full" data-node-id="1155:17724">
+              
+              <!-- Course 1 (Rightmost in RTL): أساسيات التخاطب (Node 1155:17783) -->
+              <div class="bg-white border border-[#dee8f7] rounded-[16px] p-[18px] flex flex-col justify-between gap-[14px] shadow-[0px_4px_20px_rgba(11,42,143,0.04)] hover:shadow-[0px_8px_24px_rgba(11,42,143,0.08)] hover:-translate-y-0.5 transition-all group" data-node-id="1155:17783">
+                <div class="h-[120px] rounded-[12px] overflow-hidden relative w-full bg-slate-100 shrink-0" data-node-id="1155:17784">
+                  <img src="/Alameen-center-front/assets/images/course-topic-basics.png" alt="أساسيات التخاطب" class="size-full object-cover pointer-events-none rounded-[12px] group-hover:scale-105 transition-transform duration-300" />
+                  <span class="absolute top-2.5 end-2.5 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-bold text-[#0b2a8f] shadow-xs font-['Cairo']">
+                    قيد المشاهدة
+                  </span>
+                </div>
+                
+                <div class="flex flex-col gap-[4px] text-start w-full" data-node-id="1155:17795">
+                  <h4 class="font-['Cairo'] font-bold text-[17px] leading-[1.4] text-[#012383] group-hover:text-[#0b2a8f] transition-colors w-full" data-i18n="dashboard.course1Title" data-node-id="1155:17796">
+                    أساسيات التخاطب
+                  </h4>
+                  <p class="font-['Cairo'] font-medium text-[12px] leading-[1.7] text-[#475569] w-full" data-i18n="dashboard.course1Meta" data-node-id="1155:17797">
+                    ٨ فيديوهات مكتملة • درس قيد المشاهدة
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-[6px] w-full mt-auto pt-2">
+                  <div class="flex items-center justify-between text-start w-full" data-node-id="1155:17798">
+                    <span class="font-['Cairo'] font-medium text-[12px] text-[#475569]" data-i18n="dashboard.watchProgressLabel" data-node-id="1155:17800">تقدّم المشاهدة</span>
+                    <span class="font-['Cairo'] font-bold text-[14px] text-[#0b2a8f]" data-i18n="dashboard.course1Progress" data-node-id="1155:17799">٤٢٪</span>
+                  </div>
+
+                  <div class="bg-[#dee8f7] h-[6px] rounded-full overflow-hidden w-full relative" data-node-id="1155:17801">
+                    <div class="bg-gradient-to-r from-[#0b2a8f] to-[#012383] h-full rounded-full w-[42%]" data-node-id="1155:17802"></div>
+                  </div>
+                </div>
+
+                <a
+                  href="./course-details.html"
+                  class="bg-white border border-[#dee8f7] rounded-[10px] h-[44px] flex items-center justify-center text-[#0b2a8f] font-['Cairo'] font-bold text-[13px] hover:bg-[#eaf1fb] hover:border-[#0b2a8f]/30 transition-all w-full cursor-pointer mt-1"
+                  data-i18n="dashboard.course1Btn"
+                  data-node-id="1155:17803"
+                >
+                  تفاصيل الكورس
+                </a>
+              </div>
+
+              <!-- Course 2 (Middle in RTL): تطبيقات مخارج الحروف (Node 1155:17754) -->
+              <div class="bg-white border border-[#dee8f7] rounded-[16px] p-[18px] flex flex-col justify-between gap-[14px] shadow-[0px_4px_20px_rgba(11,42,143,0.04)] hover:shadow-[0px_8px_24px_rgba(11,42,143,0.08)] hover:-translate-y-0.5 transition-all group" data-node-id="1155:17754">
+                <div class="h-[120px] rounded-[12px] overflow-hidden relative w-full bg-slate-100 shrink-0" data-node-id="1155:17755">
+                  <img src="/Alameen-center-front/assets/images/course-topic-articulation.png" alt="تطبيقات مخارج الحروف" class="size-full object-cover pointer-events-none rounded-[12px] group-hover:scale-105 transition-transform duration-300" />
+                  <span class="absolute top-2.5 end-2.5 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-bold text-[#0b2a8f] shadow-xs font-['Cairo']">
+                    مستمر
+                  </span>
+                </div>
+                
+                <div class="flex flex-col gap-[4px] text-start w-full" data-node-id="1155:17760">
+                  <h4 class="font-['Cairo'] font-bold text-[17px] leading-[1.4] text-[#012383] group-hover:text-[#0b2a8f] transition-colors w-full" data-i18n="dashboard.course2Title" data-node-id="1155:17761">
+                    تطبيقات مخارج الحروف
+                  </h4>
+                  <p class="font-['Cairo'] font-medium text-[12px] leading-[1.7] text-[#475569] w-full" data-i18n="dashboard.course2Meta" data-node-id="1155:17762">
+                    تدريب تطبيقي على نطق الحروف
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-[6px] w-full mt-auto pt-2">
+                  <div class="flex items-center justify-between text-start w-full" data-node-id="1155:17763">
+                    <span class="font-['Cairo'] font-medium text-[12px] text-[#475569]" data-i18n="dashboard.watchProgressLabel" data-node-id="1155:17765">تقدّم المشاهدة</span>
+                    <span class="font-['Cairo'] font-bold text-[14px] text-[#0b2a8f]" data-i18n="dashboard.course2Progress" data-node-id="1155:17764">٧٥٪</span>
+                  </div>
+
+                  <div class="bg-[#dee8f7] h-[6px] rounded-full overflow-hidden w-full relative" data-node-id="1155:17766">
+                    <div class="bg-gradient-to-r from-[#0b2a8f] to-[#012383] h-full rounded-full w-[75%]" data-node-id="1155:17767"></div>
+                  </div>
+                </div>
+
+                <a
+                  href="./lesson.html"
+                  class="bg-white border border-[#dee8f7] rounded-[10px] h-[44px] flex items-center justify-center text-[#0b2a8f] font-['Cairo'] font-bold text-[13px] hover:bg-[#eaf1fb] hover:border-[#0b2a8f]/30 transition-all w-full cursor-pointer mt-1"
+                  data-i18n="dashboard.course2Btn"
+                  data-node-id="1155:17768"
+                >
+                  متابعة الكورس
+                </a>
+              </div>
+
+              <!-- Course 3 (Leftmost in RTL): استراتيجيات تنمية اللغة (Node 1155:17725) -->
+              <div class="bg-white border border-[#dee8f7] rounded-[16px] p-[18px] flex flex-col justify-between gap-[14px] shadow-[0px_4px_20px_rgba(11,42,143,0.04)] hover:shadow-[0px_8px_24px_rgba(11,42,143,0.08)] hover:-translate-y-0.5 transition-all group" data-node-id="1155:17725">
+                <div class="h-[120px] rounded-[12px] overflow-hidden relative w-full bg-slate-100 shrink-0" data-node-id="1155:17726">
+                  <img src="/Alameen-center-front/assets/images/course-topic-strategies.png" alt="استراتيجيات تنمية اللغة" class="size-full object-cover pointer-events-none rounded-[12px] group-hover:scale-105 transition-transform duration-300" />
+                  <span class="absolute top-2.5 end-2.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold shadow-xs flex items-center gap-1 font-['Cairo']">
+                    <svg class="size-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    الشهادة متاحة
+                  </span>
+                </div>
+                
+                <div class="flex flex-col gap-[4px] text-start w-full" data-node-id="1155:17731">
+                  <h4 class="font-['Cairo'] font-bold text-[17px] leading-[1.4] text-[#012383] group-hover:text-[#0b2a8f] transition-colors w-full" data-i18n="dashboard.course3Title" data-node-id="1155:17732">
+                    استراتيجيات تنمية اللغة
+                  </h4>
+                  <p class="font-['Cairo'] font-medium text-[12px] leading-[1.7] text-[#475569] w-full" data-i18n="dashboard.course3Meta" data-node-id="1155:17733">
+                    ١٩ من ٢٠ فيديو مكتمل • الشهادة متاحة
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-[6px] w-full mt-auto pt-2">
+                  <div class="flex items-center justify-between text-start w-full" data-node-id="1155:17734">
+                    <span class="font-['Cairo'] font-medium text-[12px] text-[#475569]" data-i18n="dashboard.watchProgressLabel" data-node-id="1155:17736">تقدّم المشاهدة</span>
+                    <span class="font-['Cairo'] font-bold text-[14px] text-[#0b2a8f]" data-i18n="dashboard.course3Progress" data-node-id="1155:17735">٩٥٪</span>
+                  </div>
+
+                  <div class="bg-[#dee8f7] h-[6px] rounded-full overflow-hidden w-full relative" data-node-id="1155:17737">
+                    <div class="bg-gradient-to-r from-emerald-500 to-[#0b2a8f] h-full rounded-full w-[95%]" data-node-id="1155:17738"></div>
+                  </div>
+                </div>
+
+                <a
+                  href="./certificate.html"
+                  class="bg-gradient-to-r from-[#012383] to-[#0b2a8f] text-white rounded-[10px] h-[44px] flex items-center justify-center font-['Cairo'] font-bold text-[13px] hover:opacity-95 shadow-xs transition-all w-full cursor-pointer mt-1"
+                  data-i18n="dashboard.course3Btn"
+                  data-node-id="1155:17739"
+                >
+                  عرض الشهادة ✦
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ============================================== -->
+          <!-- Next Steps & Available Assignment (Node 1155:17832) -->
+          <!-- ============================================== -->
+          <div class="flex flex-col gap-[12px] w-full">
+            
+            <!-- Comparison Direction Switcher Toolbar -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl bg-blue-50/70 border border-[#dee8f7]">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-[#012383] font-['Cairo'] flex items-center gap-1.5">
+                  <span class="size-2 rounded-full bg-[#0b2a8f] animate-pulse"></span>
+                  مقارنة اتجاه البانر:
+                </span>
+                <div class="inline-flex p-0.5 bg-white rounded-lg border border-[#dee8f7] gap-1 text-xs font-bold font-['Cairo']">
+                  <button
+                    type="button"
+                    id="btn-banner-navy"
+                    onclick="switchBannerVariant('navy')"
+                    class="px-3 py-1 rounded-md bg-[#012383] text-white shadow-xs transition-all cursor-pointer"
+                  >
+                    الخيار أ: كحلي ملكي عميق
+                  </button>
+                  <button
+                    type="button"
+                    id="btn-banner-light"
+                    onclick="switchBannerVariant('light')"
+                    class="px-3 py-1 rounded-md text-[#475569] hover:bg-[#eaf1fb] hover:text-[#012383] transition-all cursor-pointer"
+                  >
+                    الخيار ب: أزرق ثلجي مضيء
+                  </button>
+                </div>
+              </div>
+              <span class="text-[11px] text-[#475569] font-medium hidden md:inline">
+                اضغط لاختبار الخيارين مباشرة قبل اعتماد النسخة النهائية
+              </span>
+            </div>
+
+            <!-- OPTION A: Refined Brand Navy Banner (Default Active) -->
+            <div
+              id="banner-variant-navy"
+              class="border border-[#0B2A8F]/30 flex flex-col md:flex-row items-center justify-between gap-[20px] p-[20px] lg:p-[24px] rounded-[18px] shadow-[0px_10px_30px_-10px_rgba(1,35,131,0.25)] w-full relative overflow-hidden transition-all"
+              style="background: linear-gradient(135deg, #012383 0%, #0B2A8F 55%, #153E90 100%);"
+              data-node-id="1155:17832"
+            >
+              <!-- Subtle decorative ambient radial glow -->
+              <div class="absolute -end-10 -top-10 size-48 rounded-full bg-blue-400/10 pointer-events-none blur-2xl"></div>
+
+              <!-- Right: Thumbnail Image (Node 3115:175) -->
+              <div class="size-[110px] sm:size-[120px] rounded-[14px] overflow-hidden border border-white/20 shrink-0 shadow-md relative group" data-node-id="3115:175">
+                <img src="/Alameen-center-front/assets/images/assignment-banner.png" alt="مهمة الدرس ٨" class="size-full object-cover pointer-events-none rounded-[14px] group-hover:scale-105 transition-transform duration-300" />
+              </div>
+
+              <!-- Middle: Assignment Info (Node 3115:166) -->
+              <div class="flex-1 flex flex-col gap-[6px] text-start w-full" data-node-id="3115:166">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/15 text-blue-100 text-[11px] font-bold font-['Cairo'] w-fit border border-white/15">
+                    <span class="size-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                    مهمة مستحقة التسليم
+                  </span>
+                </div>
+                <h3 class="font-['Cairo'] font-bold text-[20px] lg:text-[22px] leading-[1.3] text-white w-full" data-i18n="dashboard.assignmentTitle" data-node-id="3115:170">
+                  مهمة الدرس ٨: تمييز الأصوات
+                </h3>
+                <p class="font-['Cairo'] font-semibold text-[13px] leading-[1.5] text-blue-100 w-full" data-i18n="dashboard.assignmentMeta" data-node-id="3115:172">
+                  أساسيات التخاطب • المستوى الثاني
+                </p>
+                <p class="font-['Cairo'] font-medium text-[13px] sm:text-[14px] leading-[1.6] text-blue-200/90 w-full" data-i18n="dashboard.assignmentDesc" data-node-id="3115:173">
+                  أرفق ورقة نشاطك وارسلها إلى المحاضر للحصول على التقييم.
+                </p>
+              </div>
+
+              <!-- Left: Action Button (Node 3115:174) -->
+              <div class="shrink-0 w-full md:w-auto" data-node-id="3115:174">
+                <a
+                  href="./assignment.html"
+                  class="w-full md:w-[190px] h-[46px] bg-white hover:bg-slate-50 text-[#012383] font-['Cairo'] font-bold text-[14px] rounded-[10px] flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
+                  data-i18n="dashboard.assignmentAction"
+                  data-node-id="1155:17841"
+                >
+                  الذهاب لمهمة التسليم
+                </a>
+              </div>
+            </div>
+
+            <!-- OPTION B: Luminous Clinical Action Card (Hidden by default, toggleable) -->
+            <div
+              id="banner-variant-light"
+              class="hidden border border-[#CFDBEA] flex flex-col md:flex-row items-center justify-between gap-[20px] p-[20px] lg:p-[24px] rounded-[18px] shadow-[0px_8px_24px_-8px_rgba(11,42,143,0.06)] w-full relative overflow-hidden transition-all bg-gradient-to-l from-[#EAF1FB] via-[#F4F8FD] to-[#FFFFFF]"
+            >
+              <!-- Brand accent edge ribbon -->
+              <div class="absolute start-0 top-0 bottom-0 w-[5px] bg-[#012383]"></div>
+
+              <!-- Right: Thumbnail Image -->
+              <div class="size-[110px] sm:size-[120px] rounded-[14px] overflow-hidden border border-[#DEE8F7] shrink-0 shadow-sm relative group">
+                <img src="/Alameen-center-front/assets/images/assignment-banner.png" alt="مهمة الدرس ٨" class="size-full object-cover pointer-events-none rounded-[14px] group-hover:scale-105 transition-transform duration-300" />
+              </div>
+
+              <!-- Middle: Assignment Info -->
+              <div class="flex-1 flex flex-col gap-[6px] text-start w-full">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#012383]/10 text-[#012383] text-[11px] font-bold font-['Cairo'] w-fit border border-[#012383]/15">
+                    <span class="size-1.5 rounded-full bg-[#0B2A8F]"></span>
+                    مهمة مستحقة التسليم
+                  </span>
+                </div>
+                <h3 class="font-['Cairo'] font-bold text-[20px] lg:text-[22px] leading-[1.3] text-[#012383] w-full" data-i18n="dashboard.assignmentTitle">
+                  مهمة الدرس ٨: تمييز الأصوات
+                </h3>
+                <p class="font-['Cairo'] font-semibold text-[13px] leading-[1.5] text-[#0B2A8F] w-full" data-i18n="dashboard.assignmentMeta">
+                  أساسيات التخاطب • المستوى الثاني
+                </p>
+                <p class="font-['Cairo'] font-medium text-[13px] sm:text-[14px] leading-[1.6] text-[#475569] w-full" data-i18n="dashboard.assignmentDesc">
+                  أرفق ورقة نشاطك وارسلها إلى المحاضر للحصول على التقييم.
+                </p>
+              </div>
+
+              <!-- Left: Action Button -->
+              <div class="shrink-0 w-full md:w-auto">
+                <a
+                  href="./assignment.html"
+                  class="w-full md:w-[190px] h-[46px] bg-[#012383] hover:bg-[#0B2A8F] text-white font-['Cairo'] font-bold text-[14px] rounded-[10px] flex items-center justify-center gap-2 shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap"
+                  data-i18n="dashboard.assignmentAction"
+                >
+                  الذهاب لمهمة التسليم
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Workspace Footer (Node 1155:17856 - Height: ~58px) -->
+        <footer class="border-t border-[#dee8f7] px-4 sm:px-6 lg:px-[40px] py-[18px] flex flex-col sm:flex-row items-center justify-between text-[12px] text-[#475569] font-['Cairo'] font-medium shrink-0 mt-auto gap-2" data-node-id="1155:17856">
+          <p data-i18n="dashboard.footerTagline" data-node-id="1155:17858">
+            منصة الأمين • التعلّم يبدأ بخطوة
+          </p>
+          <p data-i18n="dashboard.footerHelp" data-node-id="1155:17857">
+            المساعدة والدعم
+          </p>
+        </footer>
+
+      </main>
+
+    </div>
+
+    <!-- Switcher script for Banner Visual Comparison -->
+    <script>
+      function switchBannerVariant(variant) {
+        const navyBanner = document.getElementById('banner-variant-navy');
+        const lightBanner = document.getElementById('banner-variant-light');
+        const btnNavy = document.getElementById('btn-banner-navy');
+        const btnLight = document.getElementById('btn-banner-light');
+        if (variant === 'navy') {
+          navyBanner.classList.remove('hidden');
+          lightBanner.classList.add('hidden');
+          btnNavy.className = 'px-3 py-1 rounded-md bg-[#012383] text-white shadow-xs transition-all cursor-pointer';
+          btnLight.className = 'px-3 py-1 rounded-md text-[#475569] hover:bg-[#eaf1fb] hover:text-[#012383] transition-all cursor-pointer';
+        } else {
+          navyBanner.classList.add('hidden');
+          lightBanner.classList.remove('hidden');
+          btnLight.className = 'px-3 py-1 rounded-md bg-[#012383] text-white shadow-xs transition-all cursor-pointer';
+          btnNavy.className = 'px-3 py-1 rounded-md text-[#475569] hover:bg-[#eaf1fb] hover:text-[#012383] transition-all cursor-pointer';
+        }
+      }
+    </script>
+
+    <!-- Script loading for multi-language engine -->
+  </body>
+</html>

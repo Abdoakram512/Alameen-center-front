@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الأمين | إنشاء حساب</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <script type="module" crossorigin src="/Alameen-center-front/assets/i18n-iV168XFs.js"></script>
+    <link rel="stylesheet" crossorigin href="/Alameen-center-front/assets/i18n-BpD6fLQ5.css">
+  </head>
+  <body class="bg-[#fafcff] min-h-screen text-[#475569] font-['Cairo'] antialiased flex flex-col justify-between selection:bg-[#0b2a8f]/10 selection:text-[#0b2a8f]">
+    
+    <!-- Header (Node 1150:467 - 120px height) -->
+    <header class="bg-[#fafcff] border-[#dee8f7] border-b h-[120px] flex items-center justify-between px-6 lg:px-[64px] relative shrink-0 w-full z-10" data-node-id="1150:467">
+      
+      <!-- Brand Logo & Title (Renders on RIGHT in RTL - 1st child) -->
+      <a href="../index.html" class="flex items-center gap-[12px] shrink-0" data-node-id="1150:471">
+        <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[40px] leading-[56px] text-[#012383]" data-i18n="brand.name">منصة الأمين</span>
+        <div class="size-[88px] shrink-0 relative" data-node-id="1150:473">
+          <img src="/Alameen-center-front/assets/images/logo.png" alt="منصة الأمين" class="size-full object-contain pointer-events-none" />
+        </div>
+      </a>
+
+      <!-- Home link & Language Switcher (Renders on LEFT in RTL - 2nd child) -->
+      <div class="flex items-center gap-4">
+        <!-- Language Switcher Dropdown -->
+        <div class="relative me-2" id="lang-switcher">
+          <button
+            type="button"
+            id="lang-toggle-btn"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-colors text-xs font-bold cursor-pointer"
+          >
+            <svg class="w-4 h-4 text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" /></svg>
+            <span id="current-lang-label">العربية</span>
+            <svg class="size-3.5 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+
+          <div id="lang-dropdown" class="hidden absolute start-0 top-[calc(100%+8px)] w-40 rounded-2xl bg-white shadow-xl border border-[#DEE8F7] p-1.5 z-50 transition-all flex-col gap-1">
+            <button type="button" data-set-lang="ar" class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#012383] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors">
+              <span>العربية</span>
+              <svg class="size-4 text-[#0B2A8F] lang-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </button>
+            <button type="button" data-set-lang="en" class="w-full flex items-center justify-between px-3 py-2 text-xs text-[#475569] hover:bg-[#EAF1FB] rounded-xl font-bold cursor-pointer text-start transition-colors">
+              <span>English</span>
+              <svg class="size-4 text-[#0B2A8F] lang-check-icon opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <a href="../index.html" class="flex items-center gap-[10px] h-[48px] text-[#475569] hover:text-[#012383] transition-colors group cursor-pointer" data-node-id="1150:468">
+          <span class="font-['Cairo'] font-semibold text-[16px]" data-i18n="auth.backHome">العودة إلى الرئيسية</span>
+          <div class="size-[20px] shrink-0 relative flex items-center justify-center">
+            <img src="/Alameen-center-front/assets/images/icon-arrow-right.svg" alt="" class="size-[20px] object-contain transition-transform group-hover:translate-x-1" />
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Registration Content (Node 1150:474 - 816px height) -->
+    <main class="flex flex-col lg:flex-row gap-8 lg:gap-[120px] min-h-[816px] items-center justify-center px-4 md:px-10 lg:px-[80px] py-[24px] w-full max-w-[1440px] mx-auto flex-1" data-node-id="1150:474">
+      
+      <!-- Registration Form Area (Renders on RIGHT in RTL - 1st child) (Node 1150:503 - 480px width) -->
+      <div class="flex flex-1 flex-col items-center justify-center w-full max-w-[480px] shrink-0" data-node-id="1150:503">
+        <div class="flex flex-col gap-[16px] w-full text-right" data-node-id="1150:504">
+          
+          <!-- Welcome Heading (Node 1150:505) -->
+          <div class="flex flex-col gap-[4px] items-end w-full" data-node-id="1150:505">
+            <h1 class="font-['Cairo'] font-extrabold text-[32px] sm:text-[38px] leading-tight text-[#012383] w-full text-right" data-i18n="auth.registerTitle" data-node-id="1150:506">
+              إنشاء حساب
+            </h1>
+            <p class="font-['Cairo'] font-normal text-[15px] leading-[28px] text-[#475569] w-full text-right" data-i18n="auth.registerSubtitle" data-node-id="1150:507">
+              خطوتك الأولى نحو تعلّم أساليب التخاطب.
+            </p>
+          </div>
+
+          <!-- Account Details Form (Node 1150:508) -->
+          <form id="register-form" class="flex flex-col gap-[12px] w-full" onsubmit="event.preventDefault(); window.location.href='/pages/dashboard.html';" data-node-id="1150:508">
+            
+            <!-- Full Name Field (Node 1150:509) -->
+            <div class="flex flex-col gap-[6px] items-end w-full" data-node-id="1150:509">
+              <label for="fullName" class="font-['Cairo'] font-bold text-[15px] leading-[24px] text-[#012383] text-right w-full block" data-i18n="auth.fullNameLabel" data-node-id="1150:510">
+                الاسم الكامل
+              </label>
+              <div class="w-full relative" data-node-id="1150:511">
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  placeholder="أدخل اسمك الكامل"
+                  data-i18n-placeholder="auth.fullNamePlaceholder"
+                  class="w-full h-[52px] px-[16px] rounded-[12px] bg-white border-[1.3px] border-[#dee8f7] focus:border-[#0b2a8f] focus:ring-2 focus:ring-[#0b2a8f]/10 text-[14px] text-[#475569] font-['Cairo'] outline-none transition-all placeholder:text-[#475569] text-start"
+                  data-node-id="1150:512"
+                />
+              </div>
+            </div>
+
+            <!-- Email Field (Node 1150:513) -->
+            <div class="flex flex-col gap-[6px] items-end w-full" data-node-id="1150:513">
+              <label for="email" class="font-['Cairo'] font-bold text-[15px] leading-[24px] text-[#012383] text-right w-full block" data-i18n="auth.emailLabel" data-node-id="1150:514">
+                البريد الإلكتروني
+              </label>
+              <div class="w-full relative" data-node-id="1150:515">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="name@example.com"
+                  data-i18n-placeholder="auth.emailPlaceholder"
+                  class="w-full h-[52px] px-[16px] rounded-[12px] bg-white border-[1.3px] border-[#dee8f7] focus:border-[#0b2a8f] focus:ring-2 focus:ring-[#0b2a8f]/10 text-[14px] text-[#475569] font-['Cairo'] outline-none transition-all placeholder:text-[#475569] text-start"
+                  data-node-id="1150:516"
+                />
+              </div>
+            </div>
+
+            <!-- Password Field (Node 1150:517) -->
+            <div class="flex flex-col gap-[6px] items-end w-full" data-node-id="1150:517">
+              <label for="password" class="font-['Cairo'] font-bold text-[15px] leading-[24px] text-[#012383] text-right w-full block" data-i18n="auth.passwordLabel" data-node-id="1150:518">
+                كلمة المرور
+              </label>
+              <div class="w-full relative flex items-center" data-node-id="1150:519">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="أنشئ كلمة مرور"
+                  data-i18n-placeholder="auth.passwordPlaceholderCreate"
+                  class="w-full h-[52px] pe-[52px] ps-[16px] rounded-[12px] bg-white border-[1.3px] border-[#dee8f7] focus:border-[#0b2a8f] focus:ring-2 focus:ring-[#0b2a8f]/10 text-[14px] text-[#475569] font-['Cairo'] outline-none transition-all placeholder:text-[#475569] text-start"
+                  data-node-id="1150:522"
+                />
+                <button
+                  type="button"
+                  class="toggle-pwd-btn absolute left-3 top-1/2 -translate-y-1/2 size-[44px] flex items-center justify-center text-slate-400 hover:text-[#012383] transition-colors cursor-pointer"
+                  data-target="password"
+                  aria-label="Toggle password visibility"
+                  data-node-id="1150:520"
+                >
+                  <img src="/Alameen-center-front/assets/images/icon-eye.svg" alt="" class="size-[20px]" data-node-id="1150:551" />
+                </button>
+              </div>
+              <p class="font-['Cairo'] font-normal text-[12px] leading-[22px] text-[#475569] text-right w-full" data-i18n="auth.passwordHint" data-node-id="1150:523">
+                استخدم ٨ أحرف على الأقل، مع حروف وأرقام.
+              </p>
+            </div>
+
+            <!-- Confirm Password Field (Node 1150:524) -->
+            <div class="flex flex-col gap-[6px] items-end w-full" data-node-id="1150:524">
+              <label for="confirmPassword" class="font-['Cairo'] font-bold text-[15px] leading-[24px] text-[#012383] text-right w-full block" data-i18n="auth.confirmPasswordLabel" data-node-id="1150:525">
+                تأكيد كلمة المرور
+              </label>
+              <div class="w-full relative flex items-center" data-node-id="1150:526">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  placeholder="أعد إدخال كلمة المرور"
+                  data-i18n-placeholder="auth.passwordPlaceholderConfirm"
+                  class="w-full h-[52px] pe-[52px] ps-[16px] rounded-[12px] bg-white border-[1.3px] border-[#dee8f7] focus:border-[#0b2a8f] focus:ring-2 focus:ring-[#0b2a8f]/10 text-[14px] text-[#475569] font-['Cairo'] outline-none transition-all placeholder:text-[#475569] text-start"
+                  data-node-id="1150:529"
+                />
+                <button
+                  type="button"
+                  class="toggle-pwd-btn absolute left-3 top-1/2 -translate-y-1/2 size-[44px] flex items-center justify-center text-slate-400 hover:text-[#012383] transition-colors cursor-pointer"
+                  data-target="confirmPassword"
+                  aria-label="Toggle password visibility"
+                  data-node-id="1150:527"
+                >
+                  <img src="/Alameen-center-front/assets/images/icon-eye.svg" alt="" class="size-[20px]" data-node-id="1150:554" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Terms Agreement (Node 1150:530 - Checkbox on right, text on left in RTL) -->
+            <div class="flex items-center gap-[10px] min-h-[44px] w-full justify-start mt-1" data-node-id="1150:530">
+              <label class="flex items-center gap-[10px] cursor-pointer select-none" data-node-id="1150:531">
+                <input
+                  type="checkbox"
+                  id="terms-agree"
+                  required
+                  checked
+                  class="size-[20px] rounded-[5px] border-[1.5px] border-[#cfdbea] text-[#0b2a8f] focus:ring-0 cursor-pointer accent-[#0b2a8f]"
+                  data-node-id="1150:532"
+                />
+                <span class="font-['Cairo'] font-normal text-[13px] leading-[24px] text-[#475569]">
+                  <span data-i18n="auth.termsAgreePrefix">أوافق على </span>
+                  <a href="#" class="font-['Cairo'] font-bold text-[#0b2a8f] underline hover:text-[#012383] transition-colors" data-i18n="auth.termsAndConditions">الشروط والأحكام</a>
+                  <span data-i18n="auth.and"> و</span>
+                  <a href="#" class="font-['Cairo'] font-bold text-[#0b2a8f] underline hover:text-[#012383] transition-colors" data-i18n="auth.privacyPolicy">سياسة الخصوصية</a>
+                </span>
+              </label>
+            </div>
+
+            <!-- Primary Action (Node 1150:533) -->
+            <div class="flex flex-col gap-[20px] w-full mt-2" data-node-id="1150:533">
+              <button
+                type="submit"
+                class="w-full h-[56px] rounded-[16px] bg-[#0b2a8f] hover:bg-[#012383] transition-all duration-200 text-white font-['Cairo'] font-bold text-[17px] leading-[30px] flex items-center justify-center shadow-md hover:shadow-lg cursor-pointer active:scale-[0.99]"
+                data-i18n="auth.registerAction"
+                data-node-id="1150:534"
+              >
+                إنشاء حساب
+              </button>
+
+              <p class="font-['Cairo'] font-normal text-[14px] text-center w-full text-[#475569]" data-node-id="1150:535">
+                <span data-i18n="auth.haveAccount">لديك حساب بالفعل؟ </span>
+                <a href="./login.html" class="font-['Cairo'] font-bold text-[#0b2a8f] underline hover:text-[#012383] transition-colors" data-i18n="auth.loginAction">
+                  تسجيل الدخول
+                </a>
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Visual Illustration Card: Conversation & New Beginnings (Renders on LEFT in RTL - 2nd child) (Node 1150:475 - 560px x 768px) -->
+      <div class="hidden lg:block h-[768px] w-[560px] overflow-hidden relative rounded-[28px] shrink-0 bg-[#012383] shadow-lg" data-node-id="1150:475">
+        <!-- 3D Sculpture Artwork Image (Node 1152:43) -->
+        <img src="/Alameen-center-front/assets/images/auth-sculpture.png" alt="منصة الأمين" class="absolute inset-0 size-full object-cover pointer-events-none" data-node-id="1152:43" />
+        
+        <!-- Top Gradient Overlay (Node 1152:44) -->
+        <div class="absolute inset-x-0 top-0 h-[320px] bg-gradient-to-b from-[rgba(1,35,131,0.97)] via-[rgba(1,35,131,0.82)] to-transparent via-[55%] pointer-events-none" data-node-id="1152:44"></div>
+        
+        <!-- Bottom Gradient Overlay (Node 1152:45) -->
+        <div class="absolute inset-x-0 bottom-0 h-[768px] bg-gradient-to-t from-[rgba(1,35,131,0.9)] via-[rgba(1,35,131,0)] to-transparent pointer-events-none" data-node-id="1152:45"></div>
+
+        <!-- Editorial Eyebrow (Node 1150:634) -->
+        <p class="absolute top-[44px] end-[48px] font-['Cairo'] font-medium text-[16px] leading-[26px] text-[#cfdbea] opacity-90 text-right" data-i18n="auth.editorialEyebrowRegister" data-node-id="1150:634">
+          بداية جديدة مع الأمين
+        </p>
+
+        <!-- Editorial Headline (Node 1150:635) -->
+        <div class="absolute top-[82px] end-[48px] text-right font-['Baloo_Bhaijaan_2'] font-bold text-[52px] leading-[66px] text-white" data-node-id="1150:635">
+          <p class="leading-[66px] mb-0" data-i18n="auth.editorialTitleRegister1">خطوتك الأولى</p>
+          <p class="leading-[66px]" data-i18n="auth.editorialTitleRegister2">نحو تعلّم التخاطب</p>
+        </div>
+
+        <!-- Headline Separator Rule (Node 1152:46) -->
+        <div class="absolute top-[228px] left-[48px] w-[80px] h-[2px] bg-[#cfdbea] opacity-50 rounded-[1px]" data-node-id="1152:46"></div>
+
+        <!-- Bottom Caption (Node 1150:636) -->
+        <p class="absolute bottom-[48px] end-[48px] font-['Cairo'] font-medium text-[17px] leading-[28px] text-[#eaf1fb] opacity-92 text-right" data-i18n="auth.editorialFooterRegister" data-node-id="1150:636">
+          أنشئ حسابك وابدأ رحلتك في التعلّم.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Footer (Node 1150:536 - 64px height) -->
+    <footer class="border-[#dee8f7] border-t h-[64px] flex items-center justify-between px-6 lg:px-[64px] text-[#475569] font-['Cairo'] text-[13px] w-full shrink-0" data-node-id="1150:536">
+      <!-- Tagline (Renders on RIGHT in RTL - 1st child) -->
+      <p data-i18n="auth.footerBrandTagline" data-node-id="1150:540">
+        منصة الأمين • التعلّم يبدأ بخطوة
+      </p>
+
+      <!-- Legal Links (Renders on LEFT in RTL - 2nd child) -->
+      <div class="flex items-center gap-[24px]" data-node-id="1150:537">
+        <a href="#" class="hover:text-[#012383] hover:underline transition-colors" data-i18n="auth.termsAndConditions" data-node-id="1150:538">
+          الشروط والأحكام
+        </a>
+        <a href="#" class="hover:text-[#012383] hover:underline transition-colors" data-i18n="auth.privacyPolicy" data-node-id="1150:539">
+          سياسة الخصوصية
+        </a>
+      </div>
+    </footer>
+
+    <!-- Password toggle script -->
+    <script>
+      document.querySelectorAll('.toggle-pwd-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const input = document.getElementById(targetId);
+          if (input) {
+            const isPwd = input.type === 'password';
+            input.type = isPwd ? 'text' : 'password';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
