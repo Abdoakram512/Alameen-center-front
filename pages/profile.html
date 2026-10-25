@@ -526,11 +526,11 @@
             const targetTab = btn.getAttribute('data-tab');
 
             tabBtns.forEach(b => {
-              b.classList.remove('active', 'bg-[#012383]', 'text-white');
-              b.classList.add('text-[#475569]');
+              b.classList.remove('active', 'bg-[#012383]', 'text-white', 'shadow-xs');
+              b.classList.add('text-[#475569]', 'hover:bg-[#EAF1FB]');
             });
-            btn.classList.add('active', 'bg-[#012383]', 'text-white');
-            btn.classList.remove('text-[#475569]');
+            btn.classList.add('active', 'bg-[#012383]', 'text-white', 'shadow-xs');
+            btn.classList.remove('text-[#475569]', 'hover:bg-[#EAF1FB]');
 
             tabContents.forEach(content => {
               if (content.id === `tab-${targetTab}`) {
