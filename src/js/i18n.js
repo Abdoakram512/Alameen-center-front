@@ -136,6 +136,13 @@ class I18nEngine {
       navMenu.classList.toggle('flex', isHidden);
     });
 
+    navMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navMenu.classList.add('hidden');
+        navMenu.classList.remove('flex');
+      });
+    });
+
     document.addEventListener('click', (e) => {
       if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.add('hidden');

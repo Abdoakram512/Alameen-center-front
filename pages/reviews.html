@@ -27,14 +27,14 @@
       <!-- ============================================== -->
       <!-- HEADER (WorkDo Clean Header Architecture)       -->
       <!-- ============================================== -->
-      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-4 sm:px-6 lg:px-[48px] py-3 sm:py-4 shrink-0 z-20">
+      <header class="w-full bg-[#FAFCFF] border-b border-[#D7E3F5] flex items-center justify-between px-3 sm:px-6 lg:px-[48px] h-[70px] sm:h-[84px] lg:h-[95px] shrink-0 z-20">
         
         <!-- Brand Identity -->
-        <a href="../index.html" class="flex gap-2.5 sm:gap-3 lg:gap-[14px] items-center shrink-0 cursor-pointer">
-          <div class="size-[42px] sm:size-[52px] lg:size-[64px] shrink-0 relative">
+        <a href="../index.html" class="flex gap-2 sm:gap-3 lg:gap-[14px] items-center shrink-0 cursor-pointer min-w-0">
+          <div class="size-[32px] sm:size-[46px] lg:size-[60px] shrink-0 relative">
             <img src="/assets/images/logo.png" alt="منصة مركز الأمين" class="size-full object-contain pointer-events-none" />
           </div>
-          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[22px] sm:text-[30px] lg:text-[38px] leading-tight text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
+          <span class="font-['Baloo_Bhaijaan_2'] font-extrabold text-[16px] sm:text-[22px] md:text-[28px] lg:text-[34px] xl:text-[38px] leading-tight text-[#012383] whitespace-nowrap tracking-tight" data-i18n="brand.name">
             منصة مركز الأمين
           </span>
         </a>
@@ -70,7 +70,7 @@
         </nav>
 
         <!-- Left Group (Language Switcher & Auth) -->
-        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
           
           <!-- Interactive Language Switcher Pill -->
           <div class="relative" id="lang-switcher">
@@ -79,14 +79,14 @@
               id="lang-toggle-btn"
               aria-haspopup="true"
               aria-expanded="false"
-              class="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 h-[36px] sm:h-[40px] rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#D7E3F5]/80 shadow-xs"
+              class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3.5 h-[34px] sm:h-[40px] rounded-full bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-all text-xs font-bold cursor-pointer border border-[#D7E3F5]/80 shadow-xs"
             >
-              <svg class="size-3.5 text-[#0B2A8F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="size-3.5 text-[#0B2A8F] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.6 9h16.8M3.6 15h16.8" />
               </svg>
-              <span id="current-lang-label">العربية</span>
-              <svg class="size-2.5 sm:size-3 text-[#475569] lang-caret transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span id="current-lang-label" class="hidden sm:inline">العربية</span>
+              <svg class="size-2.5 sm:size-3 text-[#475569] lang-caret transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -119,21 +119,21 @@
             </div>
           </div>
 
-          <!-- Button: تسجيل الدخول -->
+          <!-- Button: تسجيل الدخول (hidden on mobile < 640px to ensure hamburger fits; accessible in mobile menu drawer) -->
           <a
             href="./login.html"
-            class="bg-[#012383] hover:bg-[#0B2A8F] flex items-center justify-center px-4 sm:px-6 h-[36px] sm:h-[40px] rounded-full text-white text-xs sm:text-sm font-bold font-['Cairo'] transition-all shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+            class="hidden sm:inline-flex bg-[#012383] hover:bg-[#0B2A8F] items-center justify-center px-4 sm:px-6 h-[34px] sm:h-[40px] rounded-full text-white text-xs sm:text-sm font-bold font-['Cairo'] transition-all shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
             data-i18n="landing.loginBtn"
           >
             تسجيل الدخول
           </a>
 
-          <!-- Mobile Hamburger Toggle Button -->
+          <!-- Mobile Hamburger Toggle Button (Always visible on < lg) -->
           <button
             type="button"
             id="mobile-menu-toggle"
             aria-label="القائمة الرئيسية"
-            class="lg:hidden flex items-center justify-center size-[36px] rounded-xl bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-colors cursor-pointer"
+            class="lg:hidden flex items-center justify-center size-[34px] sm:size-[38px] rounded-xl bg-[#EAF1FB] text-[#012383] hover:bg-[#DEE8F7] transition-colors cursor-pointer shrink-0"
           >
             <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -151,6 +151,11 @@
         <a href="../#about" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navAbout">من نحن</a>
         <a href="./reviews.html" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm bg-[#EAF1FB] text-[#0B2A8F]" data-i18n="landing.navTestimonials">آراء الطلاب</a>
         <a href="../#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl font-['Cairo'] font-bold text-sm text-[#012383] hover:bg-[#EAF1FB]/50" data-i18n="landing.navContact">تواصل معنا</a>
+        <div class="pt-2 border-t border-[#D7E3F5]/80 flex flex-col gap-2">
+          <a href="./login.html" class="w-full h-10 bg-[#012383] hover:bg-[#0B2A8F] text-white flex items-center justify-center rounded-xl font-bold text-sm shadow-sm transition-all" data-i18n="landing.loginBtn">
+            تسجيل الدخول
+          </a>
+        </div>
       </div>
 
       <!-- ============================================== -->
@@ -746,11 +751,11 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-14 lg:pt-16 pb-8 flex flex-col gap-12">
           
-          <!-- Top Row: Main 4 Columns -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+          <!-- Top Row: Main 3 Columns -->
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-8 lg:gap-10">
             
-            <!-- Column 1: Brand & Identity (Lg: 4 cols) -->
-            <div class="lg:col-span-4 flex flex-col gap-5">
+            <!-- Column 1: Brand & Identity (Lg: 4 cols, Md: 1 col) -->
+            <div class="md:col-span-1 lg:col-span-4 flex flex-col gap-5">
               
               <!-- Brand Logo with soft badge -->
               <a href="../#home" class="flex gap-3 items-center group w-fit">
@@ -821,8 +826,8 @@
 
             </div>
 
-            <!-- Column 2: كورس التخاطب (Lg: 4 cols) -->
-            <div class="lg:col-span-4 flex flex-col gap-4">
+            <!-- Column 2: كورس التخاطب (Lg: 4 cols, Md: 1 col) -->
+            <div class="md:col-span-1 lg:col-span-4 flex flex-col gap-4">
               <div class="flex items-center gap-2">
                 <span class="w-1.5 h-4 rounded-full bg-[#10B77F]"></span>
                 <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
@@ -863,8 +868,8 @@
               </ul>
             </div>
 
-            <!-- Column 3: قنوات الدعم المباشرة (Lg: 4 cols) -->
-            <div class="lg:col-span-4 flex flex-col gap-4">
+            <!-- Column 3: قنوات الدعم المباشرة (Lg: 4 cols, Md: 1 col) -->
+            <div class="md:col-span-1 lg:col-span-4 flex flex-col gap-4">
               <div class="flex items-center gap-2">
                 <span class="w-1.5 h-4 rounded-full bg-amber-400"></span>
                 <h4 class="font-['Cairo'] font-bold text-sm text-white tracking-wide">
@@ -923,7 +928,7 @@
             </div>
 
             <!-- Security & Legal -->
-            <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] sm:text-xs">
+            <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-[11px] sm:text-xs">
               <a href="#" class="hover:text-white transition-colors">سياسة الخصوصية</a>
               <span>•</span>
               <a href="#" class="hover:text-white transition-colors">الشروط والأحكام</a>
